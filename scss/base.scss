@@ -63,6 +63,7 @@ img {
   justify-content: center;
   padding: 8px 25px;
   transition: var(--trans);
+  height: 44px;
   &:hover {
     background-color: #ece5db;
     color: #453526;
@@ -85,6 +86,7 @@ img {
   justify-content: center;
   padding: 8px 25px;
   transition: var(--trans);
+  height: 44px;
   &:hover {
     background: var(--main, #453526);
     color: var(--second, #ece5db);

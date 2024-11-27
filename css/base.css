@@ -56,6 +56,7 @@ img {
   justify-content: center;
   padding: 8px 25px;
   transition: var(--trans);
+  height: 44px;
 }
 .dark_btn:hover {
   background-color: #ece5db;
@@ -79,6 +80,7 @@ img {
   justify-content: center;
   padding: 8px 25px;
   transition: var(--trans);
+  height: 44px;
 }
 .lite_btn:hover {
   background: var(--main, #453526);
