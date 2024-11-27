@@ -300,8 +300,16 @@ header {
 .hero_info {
   position: absolute;
   transform: translateY(-50%);
-  top: 50%;
+  top: 30%;
   z-index: 3;
+  width: 100%;
+  height: 0px;
+  .box {
+    width: fit-content;
+  }
+  .container {
+    height: 0px;
+  }
 
   h3 {
     color: var(--main, #453526);
@@ -338,8 +346,10 @@ header {
 }
 .main_hero_swiper {
   height: 700px;
-
-  .swiper-slide {
+  .splide__track {
+    height: 100%;
+  }
+  .splide__slide {
     height: 100%;
     width: 100%;
     position: relative;
@@ -350,7 +360,7 @@ header {
       width: 100%;
       height: 100%;
       content: "";
-      background-color: #00000023;
+      background-color: #0000003d;
       z-index: 1;
     }
     img {
@@ -361,54 +371,27 @@ header {
     }
   }
 }
-.swiper-pagination-bullet {
+.splide__pagination__page {
   width: 10px !important;
   height: 10px !important;
   border: 2px solid #453526 !important;
   opacity: 1 !important;
   background-color: transparent !important;
 }
-.swiper-pagination-bullet-active {
+.splide__pagination__page.is-active {
   background-color: #453526 !important;
 }
-.swiper-horizontal > .swiper-pagination-bullets,
-.swiper-pagination-bullets.swiper-pagination-horizontal,
-.swiper-pagination-custom,
-.swiper-pagination-fraction {
+.splide__pagination {
   bottom: 40px !important;
 }
-.swiper-button-next,
-.swiper-button-prev {
-  background: none;
-  border: none;
+.arrow_hero {
   position: absolute;
-  top: auto !important;
-  bottom: 33px !important;
+  left: 50%;
   z-index: 10;
-}
-.swiper-button-next:after,
-.swiper-button-prev:after {
-  content: none !important;
-}
-.swiper-button-prev svg,
-.swiper-button-next svg {
-  width: 20px;
-  height: 31px;
-  fill: #ece5db;
-  transition: fill 0.3s ease;
-}
-.swiper-button-prev svg path,
-.swiper-button-next svg path {
-  transition: var(--trans);
-}
-.swiper-button-prev:hover svg path,
-.swiper-button-next:hover svg path {
-  fill: #453526;
-}
-.next_main_hero {
-  right: 50px !important;
-}
-.prev_main_hero {
-  left: 50px !important;
+  transform: translateX(-50%);
+  width: 100%;
+  bottom: 0px;
+  display: flex;
+  max-width: 1530px;
 }
 // hero_main------------------------------

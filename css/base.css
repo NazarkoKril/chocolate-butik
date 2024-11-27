@@ -60,4 +60,27 @@ img {
 .dark_btn:hover {
   background-color: #ece5db;
   color: #453526;
+}
+
+.lite_btn {
+  color: #453526;
+  text-align: center;
+  -webkit-text-stroke-width: 0.1599999964;
+  -webkit-text-stroke-color: var(--second, #ece5db);
+  font-family: "Nyght Serif";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background-color: #ece5db;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 25px;
+  transition: var(--trans);
+}
+.lite_btn:hover {
+  background: var(--main, #453526);
+  color: var(--second, #ece5db);
 }/*# sourceMappingURL=base.css.map */

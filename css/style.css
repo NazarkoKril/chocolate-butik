@@ -318,8 +318,16 @@ header {
 .hero_info {
   position: absolute;
   transform: translateY(-50%);
-  top: 50%;
+  top: 30%;
   z-index: 3;
+  width: 100%;
+  height: 0px;
+}
+.hero_info .box {
+  width: fit-content;
+}
+.hero_info .container {
+  height: 0px;
 }
 .hero_info h3 {
   color: var(--main, #453526);
@@ -357,29 +365,32 @@ header {
 .main_hero_swiper {
   height: 700px;
 }
-.main_hero_swiper .swiper-slide {
+.main_hero_swiper .splide__track {
+  height: 100%;
+}
+.main_hero_swiper .splide__slide {
   height: 100%;
   width: 100%;
   position: relative;
 }
-.main_hero_swiper .swiper-slide::after {
+.main_hero_swiper .splide__slide::after {
   position: absolute;
   left: 0px;
   top: 0px;
   width: 100%;
   height: 100%;
   content: "";
-  background-color: rgba(0, 0, 0, 0.137254902);
+  background-color: rgba(0, 0, 0, 0.2392156863);
   z-index: 1;
 }
-.main_hero_swiper .swiper-slide img {
+.main_hero_swiper .splide__slide img {
   height: 100%;
   object-fit: cover;
   user-select: none;
   pointer-events: none;
 }
 
-.swiper-pagination-bullet {
+.splide__pagination__page {
   width: 10px !important;
   height: 10px !important;
   border: 2px solid #453526 !important;
@@ -387,54 +398,21 @@ header {
   background-color: transparent !important;
 }
 
-.swiper-pagination-bullet-active {
+.splide__pagination__page.is-active {
   background-color: #453526 !important;
 }
 
-.swiper-horizontal > .swiper-pagination-bullets,
-.swiper-pagination-bullets.swiper-pagination-horizontal,
-.swiper-pagination-custom,
-.swiper-pagination-fraction {
+.splide__pagination {
   bottom: 40px !important;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-  background: none;
-  border: none;
+.arrow_hero {
   position: absolute;
-  top: auto !important;
-  bottom: 33px !important;
+  left: 50%;
   z-index: 10;
-}
-
-.swiper-button-next:after,
-.swiper-button-prev:after {
-  content: none !important;
-}
-
-.swiper-button-prev svg,
-.swiper-button-next svg {
-  width: 20px;
-  height: 31px;
-  fill: #ece5db;
-  transition: fill 0.3s ease;
-}
-
-.swiper-button-prev svg path,
-.swiper-button-next svg path {
-  transition: var(--trans);
-}
-
-.swiper-button-prev:hover svg path,
-.swiper-button-next:hover svg path {
-  fill: #453526;
-}
-
-.next_main_hero {
-  right: 50px !important;
-}
-
-.prev_main_hero {
-  left: 50px !important;
+  transform: translateX(-50%);
+  width: 100%;
+  bottom: 0px;
+  display: flex;
+  max-width: 1530px;
 }/*# sourceMappingURL=style.css.map */

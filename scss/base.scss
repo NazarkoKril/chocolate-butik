@@ -68,3 +68,25 @@ img {
     color: #453526;
   }
 }
+.lite_btn {
+  color: #453526;
+  text-align: center;
+  -webkit-text-stroke-width: 0.1599999964237213;
+  -webkit-text-stroke-color: var(--second, #ece5db);
+  font-family: "Nyght Serif";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background-color: #ece5db;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 25px;
+  transition: var(--trans);
+  &:hover {
+    background: var(--main, #453526);
+    color: var(--second, #ece5db);
+  }
+}
