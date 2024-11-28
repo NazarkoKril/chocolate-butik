@@ -1,20 +1,25 @@
 // swiper 
-var splide = new Splide('.splide', {
-    type: 'loop',
-    arrowPath: 'M6.34576 31L0 31L-6.77527e-07 15.5L-1.35505e-06 0L6.34576 -7.2751e-07L19.0373 15.5L6.34576 31Z',
+document.addEventListener('DOMContentLoaded', function () {
+    new Splide('#splide', {
+        type: 'loop',
+        breakpoints: {
+        },
+    }).mount();
 });
 
-splide.mount();
-
-var splide = new Splide('.info_slide', {
-    type: 'loop',
-    arrowPath: 'M6.34576 31L0 31L-6.77527e-07 15.5L-1.35505e-06 0L6.34576 -7.2751e-07L19.0373 15.5L6.34576 31Z',
-    drag: 'free',
-    focus: 'center',
-    perPage: 3,
-    autoScroll: {
-        speed: -1,
-    },
+// swiper_gal
+document.addEventListener('DOMContentLoaded', function () {
+    new Splide('#splide1', {
+        type: 'loop',
+        drag: 'free',
+        focus: 'center',
+        perPage: 3,
+        gap: '20px',
+        // autoScroll: {
+        //     speed: 1,
+        // },
+        breakpoints: {
+        },
+    }).mount();
 });
-
-splide.mount();
+window.splide.Extensions

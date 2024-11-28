@@ -419,6 +419,7 @@ header {
     grid-template-columns: 300px 1fr;
     gap: 25px;
     height: 420px;
+    width: 100%;
   }
   .left {
     padding-top: 35px;
@@ -440,7 +441,7 @@ header {
     }
     h5 {
       color: var(--small-text, #2b221b);
-      font-family: "Avenir Next";
+      font-family: "AvenirNext";
       font-size: 16px;
       font-style: normal;
       font-weight: 500;
@@ -454,7 +455,28 @@ header {
     height: 100%;
     .info_slide {
       height: 420px;
+      width: 100%;
+    }
+    .splide__slide {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      img {
+        width: 100%;
+        height: 277px;
+        object-fit: cover;
+      }
+      .slide_info {
+        width: auto;
+        position: absolute;
+      }
     }
   }
+}
+#splide1 .splide__track {
+  width: 100%;
+  max-width: 875px;
+  margin-right: auto;
+  margin-left: auto;
 }
 // info_main------------------------------
