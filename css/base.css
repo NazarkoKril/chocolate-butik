@@ -55,6 +55,17 @@ img {
   background-color: #ece5db;
   color: #453526;
 }
+.dark_btn svg path,
+.dark_btn svg circle {
+  transition: var(--trans);
+}
+.dark_btn:hover svg path {
+  fill: #453526;
+  stroke: #453526;
+}
+.dark_btn:hover svg circle {
+  fill: #453526;
+}
 
 .lite_btn {
   color: #453526;
@@ -78,4 +89,19 @@ img {
 .lite_btn:hover {
   background: var(--main, #453526);
   color: var(--second, #ece5db);
+}
+.lite_btn svg path,
+.lite_btn svg circle {
+  transition: var(--trans);
+}
+.lite_btn:hover svg path {
+  fill: #ece5db;
+  stroke: #ece5db;
+}
+.lite_btn:hover svg circle {
+  fill: #ece5db;
+}
+
+body .no_stroke {
+  stroke: none !important;
 }/*# sourceMappingURL=base.css.map */

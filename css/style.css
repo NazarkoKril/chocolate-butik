@@ -421,7 +421,7 @@ header {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .sect_info {
@@ -471,15 +471,11 @@ header {
   font-weight: 500;
   line-height: normal;
   margin-top: auto;
-  margin-bottom: 0px;
+  margin-bottom: 50px;
 }
 .sect_info .right {
   width: 100%;
   height: 100%;
-}
-.sect_info .right .info_slide {
-  height: 420px;
-  width: 100%;
 }
 .sect_info .right .splide__slide {
   display: flex;
@@ -494,11 +490,293 @@ header {
 .sect_info .right .splide__slide .slide_info {
   width: auto;
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 17px;
+}
+.sect_info .right .splide__slide .slide_info h3 {
+  color: var(--small-text, #2b221b);
+  text-align: center;
+  font-family: "AvenirNext";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.sect_info .right .splide__slide .slide_info h4 {
+  margin-top: 8px;
+  color: var(--small-text, #2b221b);
+  font-family: "AvenirNext";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.sect_info .right .splide__slide .slide_info h4 span {
+  text-decoration-line: line-through;
 }
 
+#splide1 {
+  height: 100%;
+}
+#splide1 .slide_link {
+  height: 100%;
+  display: block;
+}
+#splide1 .slide_link:hover .btn {
+  opacity: 1;
+}
+#splide1 .splide__arrow--prev {
+  left: 25px;
+}
+#splide1 .splide__arrow--next {
+  right: 0px;
+}
+#splide1 .arrow_hero {
+  bottom: auto;
+  top: 50%;
+  transform: translate(-50% -50%);
+}
+#splide1 .splide_arrow_custom {
+  bottom: auto !important;
+  top: 50%;
+  transform: translateY(-50%);
+}
 #splide1 .splide__track {
   width: 100%;
-  max-width: 875px;
+  max-width: 950px;
+  margin-right: 100px;
+  margin-left: auto;
+  padding-top: 35px;
+  padding-bottom: 12px;
+  border-left: 2px solid #453526;
+  border-right: 2px solid #453526;
+  height: 100%;
+}
+#splide1 .btn {
+  position: absolute;
+  z-index: 3;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  opacity: 0;
+  transition: var(--trans);
+}
+#splide1 .btn span {
+  width: 32px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  transition: var(--trans);
+  cursor: pointer;
+}
+#splide1 .btn span svg path {
+  transition: var(--trans);
+}
+#splide1 .btn span:hover {
+  background-color: rgba(232, 224, 211, 0.3);
+}
+#splide1 .slide_img {
+  position: relative;
+  height: 277px;
+}
+#splide1 span.like.active svg path,
+#splide1 span.shop.active svg path {
+  fill: #e8e0d3 !important;
+  transition: fill 0.3s ease;
+}
+#splide1 span.like svg path,
+#splide1 span.shop svg path {
+  transition: fill 0.3s ease;
+}
+
+.sect_info .flexsb .lite_btn {
+  margin-right: 100px;
+}
+
+.sect_btn .grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.sect_btn .left,
+.sect_btn .right {
+  background-image: url(../img/other/main1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.sect_btn .right {
+  background-image: url(../img/other/main2.jpg);
+}
+.sect_btn a {
+  margin: 630px auto 60px;
+}
+
+.sect_new {
+  padding-block: 60px;
+  position: relative;
+}
+.sect_new:before {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  max-width: 350px;
+  content: "";
+  background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 48.23%, #fff 128.15%);
+  z-index: 2;
+}
+.sect_new:after {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  max-width: 350px;
+  content: "";
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 48.23%, #fff 128.15%);
+  z-index: 2;
+}
+.sect_new .title {
   margin-right: auto;
   margin-left: auto;
+  z-index: -1;
+  position: relative;
+  width: 100%;
+}
+.sect_new #splide2 {
+  transform: translateY(-35px);
+  height: 420px;
+}
+.sect_new #splide2 .slide_link {
+  height: 100%;
+  display: block;
+}
+.sect_new #splide2 .slide_link:hover .btn {
+  opacity: 1;
+}
+.sect_new #splide2 .slide_img {
+  background-color: #000;
+  position: relative;
+  height: 277px;
+  width: 100%;
+}
+.sect_new #splide2 .splide__arrow--prev {
+  left: 25px;
+}
+.sect_new #splide2 .splide__arrow--next {
+  right: 0px;
+}
+.sect_new #splide2 .splide_arrow_custom {
+  bottom: auto !important;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.sect_new #splide2 .splide__track {
+  width: 100%;
+  height: 100%;
+}
+.sect_new #splide2 .arrow_hero {
+  position: absolute;
+  left: 50%;
+  z-index: 10;
+  transform: translateX(-50%);
+  width: 100%;
+  bottom: 20px;
+  display: flex;
+  max-width: 1530px;
+}
+.sect_new #splide2 .btn {
+  position: absolute;
+  z-index: 3;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  opacity: 0;
+  transition: var(--trans);
+}
+.sect_new #splide2 .btn span {
+  width: 32px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  transition: var(--trans);
+  cursor: pointer;
+}
+.sect_new #splide2 .btn span svg path {
+  transition: var(--trans);
+}
+.sect_new #splide2 .btn span:hover {
+  background-color: rgba(232, 224, 211, 0.3);
+}
+.sect_new #splide2 .splide__slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sect_new #splide2 .splide__slide img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  margin-right: auto;
+  margin-left: auto;
+}
+.sect_new #splide2 .splide__slide .slide_info {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 17px;
+}
+.sect_new #splide2 .splide__slide .slide_info h3 {
+  color: var(--small-text, #2b221b);
+  text-align: center;
+  font-family: "AvenirNext";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.sect_new #splide2 .splide__slide .slide_info h4 {
+  margin-top: 8px;
+  color: var(--small-text, #2b221b);
+  font-family: "AvenirNext";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.sect_new #splide2 .splide__slide .slide_info h4 span {
+  text-decoration-line: line-through;
+}
+.sect_new #splide2 .slide_link {
+  width: 100%;
+}
+.sect_new #splide2 span.like.active svg path,
+.sect_new #splide2 span.shop.active svg path {
+  fill: #e8e0d3 !important;
+  transition: fill 0.3s ease;
+}
+.sect_new #splide2 span.like svg path,
+.sect_new #splide2 span.shop svg path {
+  transition: fill 0.3s ease;
 }/*# sourceMappingURL=style.css.map */
