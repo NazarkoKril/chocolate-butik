@@ -61,3 +61,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     observer.observe(video);
 });
+
+// slider_new
+document.addEventListener('DOMContentLoaded', function () {
+    new Splide('#splide3', {
+        type: 'loop',
+        focus: 'center',
+        perPage: 1,
+        gap: '20px',
+        pagination: false,
+        breakpoints: {
+        },
+    }).mount();
+
+});

@@ -1202,4 +1202,85 @@ main {
 }
 .sect_inst .grid2 .right a:hover svg path {
   fill: #d1c1a8;
+}
+
+.sect_rev {
+  padding-top: 50px;
+  background-color: #ece5db;
+  padding-bottom: 130px;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%221528%22%20height%3D%22376%22%20viewBox%3D%220%200%201528%20376%22%20fill%3D%22none%22%3E%3Cpath%20opacity%3D%220.4%22%20d%3D%22M-85.8315%20374.133C-71.007%20361.291%20-49.0001%20350.97%20-49.0001%20331.5C-49.0001%20175%20121.961%20117.097%20229.5%20138.178C382.471%20168.164%20556.904%20200.57%20709%20215.473C930.881%20237.214%201087.57%20280.227%201278.36%20138.178C1398.9%2048.4274%201302.18%20-73.9121%201238.84%2060.9538C1188.73%20167.647%201266.85%20268.202%201379.9%20190.128C1493.53%20111.653%201583.61%2079.079%201721.49%2079.079C1758.69%2079.079%201927%20%2073.1342%201927%20136.518%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%2F%3E%3C%2Fsvg%3E");
+  background-position: center 100px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+.sect_rev h2 {
+  color: var(--main, #453526);
+  text-align: center;
+  -webkit-text-stroke-width: 0.5600000024;
+  -webkit-text-stroke-color: var(--main, #453526);
+  font-family: "Nyght Serif";
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.sect_rev #splide3 {
+  margin-top: 20px;
+}
+.sect_rev #splide3 .splide_arrow_custom {
+  bottom: 0px !important;
+}
+.sect_rev #splide3 .arrow_hero {
+  top: 0%;
+  transform: translate(-50%, -60%);
+}
+.sect_rev .info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 700px;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  margin-bottom: 20px;
+}
+.sect_rev .info .text {
+  width: 100%;
+  max-width: 630px;
+  padding: 25px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.sect_rev .info .text p {
+  color: var(--small-text, #2b221b);
+  text-align: center;
+  font-family: "Avenir Next";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.sect_rev .info .text img {
+  position: absolute;
+  max-width: 20px;
+}
+.sect_rev .info .text .bottom {
+  bottom: 0px;
+  left: 0px;
+}
+.sect_rev .info .text .top {
+  top: 0px;
+  right: 0px;
+}
+.sect_rev .info .name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.sect_rev .info .name img {
+  max-width: 28px;
 }/*# sourceMappingURL=style.css.map */
