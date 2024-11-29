@@ -1153,6 +1153,10 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
+.sect_inst .grid2 .grid3 img {
+  height: 100%;
+  object-fit: cover;
+}
 .sect_inst .grid2 .left {
   position: relative;
   z-index: 2;
