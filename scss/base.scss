@@ -111,3 +111,22 @@ img {
 body .no_stroke {
   stroke: none !important;
 }
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ece5db;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4d3e31;
+  border-radius: 6px;
+  transition: all 0.35s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #453526;
+}
