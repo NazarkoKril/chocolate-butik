@@ -1313,11 +1313,23 @@ footer {
     background: #d1c1a8;
     padding-block: 80px;
     .grid4 {
+      .btn_home {
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        svg path {
+          transition: var(--trans);
+        }
+        &:hover svg path {
+          fill: var(--color_dark) !important;
+        }
+      }
       display: grid;
       grid-template-columns: 180px 1fr 1fr 1fr;
       gap: 90px;
       padding-left: 50px;
       padding-right: 50px;
+      position: relative;
     }
     .col1 {
       display: flex;

@@ -1311,6 +1311,18 @@ footer .top .grid4 {
   gap: 90px;
   padding-left: 50px;
   padding-right: 50px;
+  position: relative;
+}
+footer .top .grid4 .btn_home {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+footer .top .grid4 .btn_home svg path {
+  transition: var(--trans);
+}
+footer .top .grid4 .btn_home:hover svg path {
+  fill: var(--color_dark) !important;
 }
 footer .top .col1 {
   display: flex;
