@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // slider_new
 document.addEventListener('DOMContentLoaded', function () {
     new Splide('#splide3', {
-        type: 'loop',
+        type: 'fade',
         focus: 'center',
         perPage: 1,
         gap: '20px',

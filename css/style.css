@@ -43,7 +43,7 @@ header {
 }
 
 .header__link {
-  color: var(--color_lite);
+  color: #453526;
   font-family: "Avenir Next";
   font-size: 16px;
   font-style: normal;
@@ -85,7 +85,7 @@ header {
 .h__right .search input {
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid var(--color_lite);
+  border-bottom: 1px solid #453526;
   padding-bottom: 1px;
   color: var(--color_dark);
   font-family: "Avenir Next";
@@ -98,7 +98,7 @@ header {
   outline: none;
 }
 .h__right .search input::placeholder {
-  color: var(--color_lite);
+  color: #453526;
   font-family: "Avenir Next";
   font-size: 14px;
   font-style: normal;
@@ -106,7 +106,7 @@ header {
   line-height: normal;
 }
 .h__right .search input:focus {
-  border-bottom-color: var(--color_dark);
+  border-bottom-color: #453526;
 }
 .h__right .search svg {
   position: absolute;
@@ -141,13 +141,13 @@ header {
 }
 .h__right a:hover svg path,
 .backet:hover svg path {
-  fill: var(--color_dark);
-  stroke: var(--color_dark);
+  fill: #d1c1a8;
+  stroke: #d1c1a8;
 }
 .h__right a:hover svg circle,
 .backet:hover svg circle {
-  fill: var(--color_dark);
-  stroke: var(--color_dark);
+  fill: #d1c1a8;
+  stroke: #d1c1a8;
 }
 
 .burger {
@@ -1214,6 +1214,18 @@ main {
   background-size: cover;
   height: 100%;
   width: 100%;
+  animation: moveBackground 11s infinite linear;
+}
+@keyframes moveBackground {
+  0% {
+    background-position: center;
+  }
+  50% {
+    background-position: top right;
+  }
+  100% {
+    background-position: center;
+  }
 }
 .sect_rev h2 {
   color: var(--main, #453526);
@@ -1283,4 +1295,116 @@ main {
 }
 .sect_rev .info .name img {
   max-width: 28px;
+}
+
+footer .top {
+  background: #d1c1a8;
+  padding-block: 80px;
+}
+footer .top .grid4 {
+  display: grid;
+  grid-template-columns: 180px 1fr 1fr 1fr;
+  gap: 90px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+footer .top .col1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .top .col1 .soc {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+  margin-top: 60px;
+}
+footer .top .col1 .soc a svg path {
+  transition: var(--trans);
+}
+footer .top .col1 .soc a:hover svg path {
+  fill: var(--color_dark);
+}
+footer .top .col2 {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 5px;
+}
+footer .top .col2 a {
+  color: #453526;
+  font-family: "Avenir Next";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+footer .top .col3 {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+}
+footer .top .col3 .box {
+  display: flex;
+  justify-content: start;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+footer .top .col3 .box .info {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+footer .top .col3 .box .info h3 {
+  color: #453526;
+  font-family: "Nyght Serif";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 5px;
+}
+footer .top .col3 .box .info p {
+  color: #453526;
+  font-family: "Avenir Next";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 5px;
+}
+footer .top .col4 .box {
+  display: flex;
+  justify-content: start;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+footer .top .col4 .box a {
+  color: #453526;
+  font-family: "Avenir Next";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+footer .bot {
+  padding-block: 10px;
+}
+footer .bot .grid5 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+footer .bot .grid5 p,
+footer .bot .grid5 a {
+  color: var(--small-text, #2b221b);
+  text-align: center;
+  font-family: "Avenir Next";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }/*# sourceMappingURL=style.css.map */
