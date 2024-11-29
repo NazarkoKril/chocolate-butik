@@ -636,9 +636,9 @@ main {
   top: 0px;
   height: 100%;
   width: 100%;
-  max-width: 350px;
+  max-width: 200px;
   content: "";
-  background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 48.23%, #fff 128.15%);
+  background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 14%, rgb(255, 255, 255) 100%);
   z-index: 2;
 }
 .sect_new:after {
@@ -647,9 +647,9 @@ main {
   top: 0px;
   height: 100%;
   width: 100%;
-  max-width: 350px;
+  max-width: 200px;
   content: "";
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 48.23%, #fff 128.15%);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 14%, rgb(255, 255, 255) 100%);
   z-index: 2;
 }
 .sect_new .title {
@@ -677,10 +677,12 @@ main {
   width: 100%;
 }
 .sect_new #splide2 .splide__arrow--prev {
-  left: 25px;
+  left: 5px;
+  margin-left: 200px;
 }
 .sect_new #splide2 .splide__arrow--next {
-  right: 0px;
+  right: 5px;
+  margin-right: 200px;
 }
 .sect_new #splide2 .splide_arrow_custom {
   bottom: auto !important;
