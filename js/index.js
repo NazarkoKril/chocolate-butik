@@ -46,3 +46,4 @@ document.querySelectorAll('.like, .shop').forEach(button => {
         button.classList.toggle('active');
     });
 });
+

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(../css/base.css);
 @import url(../css/fonts.css);
 :root {
@@ -43,7 +44,7 @@ header {
 
 .header__link {
   color: var(--color_lite);
-  font-family: "AvenirNext";
+  font-family: "Avenir Next";
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -87,7 +88,7 @@ header {
   border-bottom: 1px solid var(--color_lite);
   padding-bottom: 1px;
   color: var(--color_dark);
-  font-family: "AvenirNext";
+  font-family: "Avenir Next";
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -98,7 +99,7 @@ header {
 }
 .h__right .search input::placeholder {
   color: var(--color_lite);
-  font-family: "AvenirNext";
+  font-family: "Avenir Next";
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -310,6 +311,10 @@ header {
   font-weight: 600 !important;
 }
 
+main {
+  overflow-x: hidden;
+}
+
 .sect_hero {
   width: 100%;
   position: relative;
@@ -465,7 +470,7 @@ header {
 }
 .sect_info .left h5 {
   color: var(--small-text, #2b221b);
-  font-family: "AvenirNext";
+  font-family: "Avenir Next";
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -500,7 +505,7 @@ header {
 .sect_info .right .splide__slide .slide_info h3 {
   color: var(--small-text, #2b221b);
   text-align: center;
-  font-family: "AvenirNext";
+  font-family: "Avenir Next";
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -509,7 +514,7 @@ header {
 .sect_info .right .splide__slide .slide_info h4 {
   margin-top: 8px;
   color: var(--small-text, #2b221b);
-  font-family: "AvenirNext";
+  font-family: "Avenir Next";
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
@@ -750,7 +755,7 @@ header {
 .sect_new #splide2 .splide__slide .slide_info h3 {
   color: var(--small-text, #2b221b);
   text-align: center;
-  font-family: "AvenirNext";
+  font-family: "Avenir Next";
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -759,7 +764,7 @@ header {
 .sect_new #splide2 .splide__slide .slide_info h4 {
   margin-top: 8px;
   color: var(--small-text, #2b221b);
-  font-family: "AvenirNext";
+  font-family: "Avenir Next";
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
@@ -779,4 +784,269 @@ header {
 .sect_new #splide2 span.like svg path,
 .sect_new #splide2 span.shop svg path {
   transition: fill 0.3s ease;
+}
+
+.sect_box {
+  position: relative;
+  padding-top: 220px;
+  padding-bottom: 180px;
+  /* Анімації для зображень */
+  /* Анімації для кожного ефекту */
+}
+.sect_box h2 {
+  color: var(--main, #453526);
+  text-align: center;
+  width: 100%;
+  max-width: 920px;
+  margin: 0px auto 80px;
+  -webkit-text-stroke-width: 0.5600000024;
+  -webkit-text-stroke-color: var(--main, #453526);
+  font-family: "Nyght Serif";
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  position: relative;
+  z-index: 2;
+}
+.sect_box a {
+  width: 220px;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  z-index: 2;
+}
+.sect_box img {
+  position: absolute;
+  z-index: 1;
+}
+.sect_box .anim1 {
+  max-width: 200px;
+  top: 17px;
+  left: 164px;
+}
+.sect_box .anim2 {
+  max-width: 64px;
+  top: 195px;
+  left: 120px;
+}
+.sect_box .anim3 {
+  max-width: 270px;
+  left: -67px;
+  bottom: 0px;
+}
+.sect_box .anim4 {
+  max-width: 64px;
+  left: 250px;
+  bottom: 190px;
+}
+.sect_box .anim5 {
+  max-width: 276px;
+  left: 180px;
+  bottom: -66px;
+}
+.sect_box .anim6 {
+  max-width: 230px;
+  top: -23px;
+  right: 300px;
+}
+.sect_box .anim7 {
+  max-width: 64px;
+  top: 17px;
+  right: 200px;
+}
+.sect_box .anim8 {
+  max-width: 270px;
+  top: 90px;
+  right: -18px;
+}
+.sect_box .anim9 {
+  max-width: 64px;
+  right: 300px;
+  bottom: 200px;
+}
+.sect_box .anim10 {
+  max-width: 265px;
+  right: 50px;
+  bottom: -70px;
+}
+.sect_box .anim1 {
+  animation: moveDown1 6s ease-in-out infinite;
+}
+.sect_box .anim2 {
+  animation: moveDown5 6s ease-in-out infinite;
+}
+.sect_box .anim4 {
+  animation: moveDown2 5s ease-in-out infinite;
+}
+.sect_box .anim3 {
+  animation: moveDown6 6s ease-in-out infinite;
+}
+.sect_box .anim5 {
+  animation: moveDownAndRotate 5s ease-in-out infinite;
+}
+.sect_box .anim6 {
+  animation: moveDownAndRotate1 5s ease-in-out infinite;
+}
+.sect_box .anim7 {
+  animation: moveDown1 6s ease-in-out infinite;
+}
+.sect_box .anim9 {
+  animation: moveDown5 5s ease-in-out infinite;
+}
+.sect_box .anim8 {
+  animation: moveDown6 6s ease-in-out infinite;
+}
+.sect_box .anim10 {
+  animation: moveDownAndRotate 7s ease-in-out infinite;
+}
+@keyframes moveDown1 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(40px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes moveDown2 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(45px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes moveDownAndRotate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(50px) rotate(10deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+@keyframes moveDownAndRotate1 {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(50px) rotate(20deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+@keyframes moveDown5 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(35px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes moveDown6 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes moveDown7 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(60px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.sect_about {
+  margin-top: 100px;
+  padding-block: 50px;
+  background-color: #ece5db;
+}
+.sect_about .grid2 {
+  display: grid;
+  grid-template-columns: 450px 1fr;
+}
+.sect_about .grid2 .right {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sect_about .grid2 h2 {
+  color: var(--white, #fff);
+  font-family: "Ms Madi";
+  font-size: 190px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  position: absolute;
+  opacity: 0.4;
+  z-index: 1;
+  transform: translateX(-50%);
+  left: 50%;
+  top: 0px;
+  width: 100%;
+  max-width: 730px;
+}
+.sect_about .grid2 .info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 550px;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  z-index: 2;
+}
+.sect_about .grid2 .info h3 {
+  color: var(--main, #453526);
+  text-align: center;
+  margin-bottom: 15px;
+  -webkit-text-stroke-width: 0.2560000122;
+  -webkit-text-stroke-color: var(--main, #453526);
+  font-family: "Nyght Serif";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.sect_about .grid2 .info p {
+  color: var(--small-text, #2b221b);
+  text-align: center;
+  font-family: "Avenir Next";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 50px;
+}
+.sect_about .grid2 .info a {
+  width: 220px;
+  border: 2px solid transparent;
+}
+.sect_about .grid2 .info a:hover {
+  border: 2px solid var(--color_dark);
 }/*# sourceMappingURL=style.css.map */
