@@ -1050,3 +1050,162 @@ main {
   }
 }
 // sect_about------------------------------
+// sect_video------------------------------
+.sect_video {
+  padding-top: 50px;
+
+  .video {
+    width: 100%;
+    position: relative;
+  }
+  video {
+    width: 100%;
+  }
+}
+// sect_video------------------------------
+// sect_corporate------------------------------
+.sect_corporate {
+  margin-block: 50px;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%221528%22%20height%3D%22456%22%20viewBox%3D%220%200%201528%20456%22%20fill%3D%22none%22%3E%3Cpath%20opacity%3D%220.4%22%20d%3D%22M-59%20231.441C5.66231%20274.909%20105.797%20308.799%20222.656%20289.61C408.144%20259.152%20469.548%2019.7843%20405.13%2003.63137C338.92%20-12.9711%20326.325%2051.1575%20350.013%20134.917C373.701%20218.676%20451.5%20462.449%20790%20370.724C1128.5%20279%201438.33%20412.833%201620%20454.5%22%20stroke%3D%22%23ECE5DB%22%20stroke-width%3D%222%22%2F%3E%3C%2Fsvg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  animation: moveBackground 10s infinite linear;
+  position: relative;
+
+  .image {
+    position: absolute;
+    right: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    max-width: 500px;
+  }
+  .border {
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid #453526;
+    border-bottom: 2px solid #453526;
+    padding-block: 200px;
+  }
+  .info {
+    width: 100%;
+    max-width: 670px;
+    position: relative;
+    z-index: 2;
+    h2 {
+      color: var(--main, #453526);
+      -webkit-text-stroke-width: 0.5600000023841858;
+      -webkit-text-stroke-color: var(--main, #453526);
+      font-family: "Nyght Serif";
+      font-size: 60px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin-bottom: 15px;
+    }
+    p {
+      color: var(--small-text, #2b221b);
+      font-family: "Avenir Next";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      margin-bottom: 50px;
+    }
+  }
+  @keyframes moveBackground {
+    0% {
+      background-position: center;
+    }
+    50% {
+      background-position: top right; /* переміщення фону */
+    }
+    100% {
+      background-position: center;
+    }
+  }
+}
+// sect_corporate------------------------------
+// sect_inst------------------------------
+.sect_inst {
+  padding-bottom: 50px;
+
+  .grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    h2 {
+      color: var(--second, #ece5db);
+      font-family: "Ms Madi";
+      font-size: 140px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      position: absolute;
+      width: 100%;
+      right: 0px;
+      left: auto;
+      bottom: 0px;
+      text-align: right;
+      z-index: 1;
+    }
+    .grid3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    .left {
+      position: relative;
+      z-index: 2;
+    }
+    .right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      position: relative;
+      z-index: 2;
+      .info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        max-width: 370px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+      h3 {
+        color: var(--main, #453526);
+        text-align: center;
+        -webkit-text-stroke-width: 0.25600001215934753;
+        -webkit-text-stroke-color: var(--main, #453526);
+        font-family: "Nyght Serif";
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-bottom: 15px;
+      }
+      p {
+        color: var(--small-text, #2b221b);
+        text-align: center;
+        font-family: "Avenir Next";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-bottom: 50px;
+      }
+      a svg path {
+        transition: var(--trans);
+      }
+      a:hover svg path {
+        fill: #d1c1a8;
+      }
+    }
+  }
+}
+// sect_inst------------------------------
