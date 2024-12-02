@@ -1,7 +1,7 @@
 // slider main 
 document.addEventListener('DOMContentLoaded', function () {
     new Splide('#splide', {
-        type: 'loop',
+        type: 'fade',
         breakpoints: {
         },
     }).mount();

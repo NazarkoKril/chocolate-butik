@@ -420,7 +420,7 @@ main {
   .grid2 {
     display: grid;
     grid-template-columns: 300px 1fr;
-    gap: 25px;
+    gap: 55px;
     height: 420px;
     width: 100%;
   }
@@ -503,6 +503,7 @@ main {
 }
 #splide1 {
   height: 100%;
+  width: 100%;
   .slide_link {
     height: 100%;
     display: block;
@@ -512,10 +513,10 @@ main {
   }
 
   .splide__arrow--prev {
-    left: 25px;
+    left: -30px;
   }
   .splide__arrow--next {
-    right: 0px;
+    right: -30px;
   }
   .arrow_hero {
     bottom: auto;
@@ -530,7 +531,7 @@ main {
   .splide__track {
     width: 100%;
     max-width: 950px;
-    margin-right: 100px;
+    margin-right: 80px;
     margin-left: auto;
     padding-top: 35px;
     padding-bottom: 12px;
@@ -583,7 +584,7 @@ main {
   }
 }
 .sect_info .flexsb .lite_btn {
-  margin-right: 100px;
+  margin-right: 80px;
 }
 
 // info_main------------------------------
