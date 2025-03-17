@@ -20,3 +20,26 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const backetBtn = document.querySelector(".backet");
+    const backetMain = document.querySelector(".backet_main");
+    const closeBacketBtn = document.querySelector(".close_backet");
+    const removeCandyBtns = document.querySelectorAll(".remove_candy");
+
+    // Відкриття кошика
+    backetBtn.addEventListener("click", function () {
+        backetMain.classList.add("open");
+    });
+
+    // Закриття кошика
+    closeBacketBtn.addEventListener("click", function () {
+        backetMain.classList.remove("open");
+    });
+
+    // Видалення цукерки зі списку
+    removeCandyBtns.forEach(button => {
+        button.addEventListener("click", function () {
+            this.closest("li").remove();
+        });
+    });
+});

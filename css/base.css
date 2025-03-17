@@ -1,7 +1,8 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: "AvenirNext", sans-serif;
   text-decoration: none;
   list-style: none;
@@ -43,11 +44,20 @@ img {
   font-weight: 400;
   line-height: normal;
   background: var(--main, #453526);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 8px 25px;
+  -webkit-transition: var(--trans);
   transition: var(--trans);
   height: 44px;
 }
@@ -57,6 +67,7 @@ img {
 }
 .dark_btn svg path,
 .dark_btn svg circle {
+  -webkit-transition: var(--trans);
   transition: var(--trans);
 }
 .dark_btn:hover svg path {
@@ -78,11 +89,20 @@ img {
   font-weight: 400;
   line-height: normal;
   background-color: #ece5db;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 8px 25px;
+  -webkit-transition: var(--trans);
   transition: var(--trans);
   height: 44px;
 }
@@ -92,6 +112,7 @@ img {
 }
 .lite_btn svg path,
 .lite_btn svg circle {
+  -webkit-transition: var(--trans);
   transition: var(--trans);
 }
 .lite_btn:hover svg path {
@@ -118,9 +139,10 @@ body .no_stroke {
 ::-webkit-scrollbar-thumb {
   background: #4d3e31;
   border-radius: 6px;
+  -webkit-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: #453526;
-}/*# sourceMappingURL=base.css.map */
+}

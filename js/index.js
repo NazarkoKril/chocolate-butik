@@ -20,6 +20,9 @@ document.addEventListener('DOMContentLoaded', function () {
             speed: 1,
         },
         breakpoints: {
+            1200: {
+                perPage: 2,
+            },
         },
     }).mount(window.splide.Extensions);
 
@@ -33,8 +36,18 @@ document.addEventListener('DOMContentLoaded', function () {
         focus: 'center',
         perPage: 6,
         gap: '20px',
+        arrows: false,
         pagination: false,
         breakpoints: {
+            1640: {
+                perPage: 5,
+            },
+            1400: {
+                perPage: 4,
+            },
+            1000: {
+                perPage: 3,
+            },
         },
     }).mount();
 
