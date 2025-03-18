@@ -1899,4 +1899,17 @@ z-index: -1;
   .hero_info h2{
     font-size: 45px;
   }
+  .backet_main{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .backet_main .backet_list li .top p{
+    font-size: 14px;
+  }
+  .price{
+    font-size: 20px;
+  }
+  .backet_main .backet_list li .top button{
+    transform: rotate(45deg) translateY(-5px);
+  }
 }
