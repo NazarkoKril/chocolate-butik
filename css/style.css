@@ -2393,4 +2393,8 @@ footer .footer_bot .grid5 a {
     -webkit-transform: rotate(45deg) translateY(-5px);
             transform: rotate(45deg) translateY(-5px);
   }
+  .main_hero_swiper .splide__slide img {
+    -o-object-position: 62%;
+       object-position: 62%;
+  }
 }
