@@ -2192,4 +2192,191 @@ footer .footer_bot .grid5 a {
   .main_hero_swiper {
     height: 100vh;
   }
+  .sect_btn .grid2 {
+    grid-template-columns: 1fr;
+  }
+  .sect_about .grid2, .sect_inst .grid2 {
+    gap: 50px;
+    grid-template-columns: 1fr;
+  }
+  .sect_inst .grid2 h2 {
+    font-size: 100px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    right: auto;
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  footer .top .grid4 {
+    grid-template-columns: 1fr;
+  }
+  .sect_rev #splide3 .arrow_hero {
+    top: auto;
+  }
+  .sect_rev .info .text {
+    padding-bottom: 50px;
+  }
+  .sect_rev .info .text .bottom {
+    bottom: 50px;
+  }
+  .sect_corporate .image {
+    height: 420px;
+    width: auto;
+    top: 35%;
+  }
+  .sect_corporate .border {
+    padding-block: 50px;
+    min-height: 520px;
+  }
+  .sect_corporate {
+    overflow: hidden;
+  }
+  footer .top {
+    padding-block: 40px;
+  }
+  footer .top .col1 .soc {
+    gap: 20px;
+  }
+  footer .top .grid4 {
+    gap: 30px;
+  }
+  footer .top .col2 {
+    padding-left: 35px;
+    gap: 10px;
+  }
+  .sect_rev {
+    -webkit-animation: moveBackground 20s infinite linear;
+            animation: moveBackground 20s infinite linear;
+    padding-bottom: 80px;
+  }
+  .sect_rev h2 {
+    font-size: 32px;
+  }
+  .sect_inst .grid2 .right p {
+    font-size: 16px;
+  }
+  .sect_inst .grid2 h2 {
+    white-space: nowrap;
+    font-size: 60px;
+    bottom: 30%;
+  }
+  .sect_about .grid2 h2 {
+    font-size: 100px;
+    white-space: nowrap;
+    top: -30%;
+  }
+  .sect_corporate .info h2 {
+    font-size: 32px;
+    max-width: 260px;
+  }
+  .sect_corporate .info p {
+    font-size: 16px;
+    max-width: 170px;
+  }
+  .sect_corporate .info {
+    min-height: 450px;
+    position: relative;
+  }
+  .sect_corporate .info .lite_btn {
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: 0px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+  }
+  .sect_box h2 {
+    font-size: 32px;
+  }
+  .sect_box {
+    padding-bottom: 30px;
+  }
+  .sect_box .anim1 {
+    max-width: 100px;
+    top: 50px;
+    left: 164px;
+  }
+  .sect_box .anim2 {
+    max-width: 44px;
+    top: 160px;
+    left: 120px;
+  }
+  .sect_box .anim3 {
+    max-width: 170px;
+    left: -67px;
+    bottom: 0px;
+  }
+  .sect_box .anim4 {
+    max-width: 44px;
+    left: auto;
+    right: 50px;
+    bottom: 190px;
+  }
+  .sect_box .anim5 {
+    max-width: 176px;
+    left: 180px;
+    bottom: 66px;
+  }
+  .sect_box .anim6 {
+    max-width: 130px;
+    top: -23px;
+    right: 300px;
+  }
+  .sect_box .anim7 {
+    max-width: 44px;
+    top: 17px;
+    right: 200px;
+  }
+  .sect_box .anim8 {
+    max-width: 170px;
+    top: 70px;
+    right: -18px;
+  }
+  .sect_box .anim9 {
+    max-width: 44px;
+    right: 300px;
+    bottom: 200px;
+  }
+  .sect_box .anim10 {
+    max-width: 165px;
+    right: 150px;
+    bottom: -70px;
+  }
+  .sect_box a {
+    margin-top: 200px;
+  }
+  .sect_new::after, .sect_new::before {
+    background: transparent;
+    z-index: -1;
+  }
+  .sect_new .title {
+    height: 130px;
+  }
+  .sect_new {
+    padding-block: 0px;
+  }
+  .sect_new #splide2 {
+    height: 380px;
+  }
+  .sect_btn .left, .sect_btn .right {
+    background-size: contain;
+    height: 450px;
+    position: relative;
+    margin-bottom: 50px;
+  }
+  .sect_btn a {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    white-space: nowrap;
+  }
+  .hero_info h2 {
+    font-size: 45px;
+  }
 }

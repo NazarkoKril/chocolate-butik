@@ -23,6 +23,9 @@ document.addEventListener('DOMContentLoaded', function () {
             1200: {
                 perPage: 2,
             },
+            500: {
+                perPage: 1.3,
+            },
         },
     }).mount(window.splide.Extensions);
 
@@ -47,6 +50,12 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             1000: {
                 perPage: 3,
+            },
+            700: {
+                perPage: 2,
+            },
+            500: {
+                perPage: 1.3,
             },
         },
     }).mount();
