@@ -1523,7 +1523,8 @@ main {
     background-position: center;
   }
   50% {
-    background-position: top right; /* переміщення фону */
+    background-position: top right;
+    /* переміщення фону */
   }
   100% {
     background-position: center;
@@ -1534,7 +1535,8 @@ main {
     background-position: center;
   }
   50% {
-    background-position: top right; /* переміщення фону */
+    background-position: top right;
+    /* переміщення фону */
   }
   100% {
     background-position: center;
@@ -2151,7 +2153,189 @@ footer .footer_bot .grid5 a {
   width: 100%;
 }
 
+.hero_page {
+  height: 100svh;
+}
+.hero_page h2 {
+  position: absolute;
+  left: 50%;
+  top: 140px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: clamp(60px, 8vw, 120px);
+  white-space: nowrap;
+  font-weight: 500;
+  color: #ECE5DB;
+  font-family: "Nyght Serif";
+}
+.hero_page .bg {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.sect_about.about {
+  background: #FFF;
+  margin-top: 0px;
+  padding-block: 130px;
+  position: relative;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%221528%22%20height%3D%22540%22%20viewBox%3D%220%200%201528%20540%22%20fill%3D%22none%22%3E%3Cpath%20opacity%3D%220.4%22%20d%3D%22M-296%20221.314C-235.977%20332.676%20-46.584%20466.194%20222.645%20421.882C491.875%20377.571%20581%2029.3281%20487.5%205.82823C391.398%20-18.3257%20373.118%2074.9713%20407.5%20196.828C441.882%20318.685%20549.68%20591.38%20978%20527.828C1322%20476.787%201212.5%20196.828%201136.5%20234.328C1062%20271.089%201128%20546.328%201528%20421.882%22%20stroke%3D%22%23ECE5DB%22%20stroke-width%3D%224%22/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  -webkit-animation: moveBackground 10s infinite linear;
+          animation: moveBackground 10s infinite linear;
+}
+.sect_about.about .grid2 {
+  grid-template-columns: 1fr 1fr;
+}
+.sect_about.about h2 {
+  color: var(--second, #ECE5DB);
+  font-family: "Ms Madi";
+  font-size: 190px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  color: var(--second, #ECE5DB);
+  font-family: "Ms Madi";
+  font-size: 190px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.animate_svg {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.animate_path {
+  stroke-dasharray: 4000;
+  stroke-dashoffset: 4000;
+  -webkit-animation: draw-line 6s infinite forwards;
+          animation: draw-line 6s infinite forwards;
+}
+
+@-webkit-keyframes draw-line {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes draw-line {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.sect_2 .animate_svg {
+  position: absolute;
+  z-index: -1;
+  bottom: 0px;
+  width: 100%;
+  height: 80%;
+}
+.sect_2 .info {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 150px;
+}
+.sect_2 .info img {
+  width: auto;
+  height: 480px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: -200px auto 140px;
+}
+.sect_2 .grid3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.sect_2 .grid3 h3 {
+  color: var(--main, #453526);
+  text-align: center;
+  -webkit-text-stroke-width: 0.26px;
+  -webkit-text-stroke-color: var(--main, #453526);
+  font-family: "Nyght Serif";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 15px;
+}
+.sect_2 .grid3 p {
+  max-width: 300px;
+  color: var(--small-text, #2B221B);
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  /* Body base */
+  font-family: "Avenir Next";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.about1 {
+  padding-bottom: 50px !important;
+  background-image: none !important;
+}
+.about1 h2 {
+  top: 15% !important;
+}
+.about1 .grid4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+.about1 .grid4 p {
+  color: var(--small-text, #2B221B);
+  /* Body base */
+  font-family: "Avenir Next";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.about1 .grid4 h4 {
+  color: var(--main, #453526);
+  /* H4 */
+  -webkit-text-stroke-width: 0.16px;
+  -webkit-text-stroke-color: var(--main, #453526);
+  font-family: "Nyght Serif";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+
+.sect_video.about {
+  padding: 0px;
+}
+.sect_video.about video {
+  padding-block: 50px;
+  border-top: 2px solid #453526;
+  border-bottom: 2px solid #453526;
+}
+
+.add-to-cart {
+  padding-top: 50px;
+}
+
 @media (max-width: 1250px) {
+  .sect_about.about h2 {
+    font-size: 102px;
+  }
   .h__center {
     margin-left: 30px;
   }
@@ -2177,6 +2361,22 @@ footer .footer_bot .grid5 a {
   }
 }
 @media (max-width: 900px) {
+  .sect_2 .info img {
+    margin-bottom: 40px;
+  }
+  .sect_about.about .grid2 {
+    grid-template-columns: 1fr;
+  }
+  .sect_2 .grid3 {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .hero_page h2.wrap {
+    white-space: wrap;
+  }
+  .sect_2 .info {
+    padding-bottom: 10px;
+  }
   .sect_info .grid2 {
     grid-template-columns: 1fr;
     height: auto;
@@ -2195,7 +2395,8 @@ footer .footer_bot .grid5 a {
   .sect_btn .grid2 {
     grid-template-columns: 1fr;
   }
-  .sect_about .grid2, .sect_inst .grid2 {
+  .sect_about .grid2,
+  .sect_inst .grid2 {
     gap: 50px;
     grid-template-columns: 1fr;
   }
@@ -2209,6 +2410,19 @@ footer .footer_bot .grid5 a {
   }
 }
 @media (max-width: 600px) {
+  .sect_2 .animate_svg {
+    bottom: -30%;
+  }
+  .about1 .grid4 {
+    grid-template-columns: 1fr;
+  }
+  .sect_about.about {
+    padding-top: 80px;
+  }
+  .sect_2 .info img {
+    height: 200px;
+    margin-top: -100px;
+  }
   footer .top .grid4 {
     grid-template-columns: 1fr;
   }
@@ -2347,7 +2561,8 @@ footer .footer_bot .grid5 a {
   .sect_box a {
     margin-top: 200px;
   }
-  .sect_new::after, .sect_new::before {
+  .sect_new::after,
+  .sect_new::before {
     background: transparent;
     z-index: -1;
   }
@@ -2360,7 +2575,8 @@ footer .footer_bot .grid5 a {
   .sect_new #splide2 {
     height: 380px;
   }
-  .sect_btn .left, .sect_btn .right {
+  .sect_btn .left,
+  .sect_btn .right {
     background-size: contain;
     height: 450px;
     position: relative;

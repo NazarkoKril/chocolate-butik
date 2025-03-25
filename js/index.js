@@ -1,3 +1,5 @@
+
+
 // slider main 
 document.addEventListener('DOMContentLoaded', function () {
     new Splide('#splide', {
@@ -97,3 +99,5 @@ document.addEventListener('DOMContentLoaded', function () {
     }).mount();
 
 });
+
+
