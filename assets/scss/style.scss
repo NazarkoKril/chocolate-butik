@@ -181,7 +181,7 @@ header {
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
-  z-index: 99999;
+  z-index: 100;
   position: relative;
 }
 
@@ -206,7 +206,7 @@ header {
   padding: 50px;
   box-sizing: border-box;
   transition: right 0.3s ease;
-  z-index: 1000;
+  z-index: 99;
   overflow-y: auto;
   transition: var(--trans);
   max-height: 100vh;

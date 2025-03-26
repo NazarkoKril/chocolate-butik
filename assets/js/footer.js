@@ -1,3 +1,5 @@
+const footer = document.querySelectorAll('.footer_component')
+const footerComponent = `
 <footer>
     <div class="top">
         <div class="container">
@@ -136,3 +138,10 @@
         </div>
     </div>
 </footer>
+
+`
+footer.forEach( (el) => {
+  return el.innerHTML = footerComponent
+}
+)
+
