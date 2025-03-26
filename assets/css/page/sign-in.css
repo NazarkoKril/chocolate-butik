@@ -1,0 +1,114 @@
+.container-title {
+    text-align: center;
+}
+
+.sign-up {
+    padding-top: 35px;
+}
+
+.sign-up .input:has(.checkbox) {
+    border: none;
+    padding-bottom: 0;
+    padding-top: 11.5px;
+}
+
+.sign-up .checkbox {
+    color: var(--color_dark);
+    font-family: "Avenir Next";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21.86px;
+    margin-bottom: 0;
+}
+
+.sign-up .checkbox:hover {
+    color: var(--color_lite);
+}
+
+.sign-up button, .log-in button {
+    margin: 0 auto;
+    margin-top: 43px;
+    width: 216px;
+    margin-bottom: 14px;
+}
+
+.log-in .inputs {
+    min-height: 228.6px;
+    margin-bottom: 0;
+}
+
+.log-in {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.log-in .inputs {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.forgot-pass {
+    color: var(--color_lite);
+}
+
+.forgot-pass::after  {
+    background-color: var(--color_lite);
+}
+
+.forgot-pass:hover {
+    color: var(--color_dark);
+}
+
+.forgot-pass:hover::after {
+    background-color: var(--color_dark);
+}
+
+.for-checkbox {
+    display: none;
+}
+
+@media (max-width: 1019px) {
+    h2 {
+        margin-bottom: 18px;
+        max-width: 250px;
+    }
+
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .inputs {
+        margin-bottom: 20px;
+        gap: 20px;
+    }
+
+    .inputs-container {
+        position: relative;
+    }
+
+    .for-checkbox {
+        display: block;
+        border: 1px solid transparent;
+        margin-top: 41px;
+    }
+
+    .input:has(.checkbox) {
+        position: absolute;
+        bottom: 0;
+    }
+
+    .sign-up {
+        margin-bottom: 48px;
+        padding-top: 38px;
+    }
+
+    .log-in {
+        padding-top: 38px;
+        margin-bottom: 40px;
+    }
+
+    .log-in .inputs {
+        min-height: 0;
+    }
+}
