@@ -1,5 +1,5 @@
-document.addEventListener('DOMContentLoaded', function () {
-    new Swiper('#swiper3', {
+document.addEventListener("DOMContentLoaded", function () {
+    new Swiper("#swiper", {
         effect: 'fade',
         fadeEffect: {
             crossFade: true
@@ -9,6 +9,9 @@ document.addEventListener('DOMContentLoaded', function () {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
     });
-
 });

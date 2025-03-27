@@ -1,14 +1,22 @@
-
-document.addEventListener("DOMContentLoaded", function () {
-    new Swiper("#swiper1", {
+document.addEventListener('DOMContentLoaded', function () {
+    const swiper1 = new Swiper("#swiper1", {
+        slidesPerView: "auto", 
+        spaceBetween: 24, 
         loop: true,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+        speed: 6500,
+        autoplay: {
+            delay: 0,
+            disableOnInteraction: false,
+            reverseDirection: true,
         },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
+    });
+    const swiperEl = document.querySelector('#swiper1');
+
+    swiperEl.addEventListener('mouseover', () => {
+        swiper1.autoplay.stop(); 
+    });
+
+    swiperEl.addEventListener('mouseleave', () => {
+        swiper1.autoplay.start(); 
     });
 });
