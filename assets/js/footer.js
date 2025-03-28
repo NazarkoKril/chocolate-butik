@@ -65,15 +65,15 @@ const footerComponent = `
                     </div>
                 </li>
                 <li class="col2">
-                    <a href="./" class="header__link">Головна</a>
-                    <a href="./page/catalog.html" class="header__link">Товари</a>
-                    <a href="./page/about.html" class="header__link">Про нас</a>
-                    <a href="./page/blog.html" class="header__link">Новини</a>
-                    <a href="./page/account.html" class="header__link">Мій акаунт</a>
-                    <a href="./" class="header__link">Кошик</a>
-                    <a href="./page/corporate.html" class="header__link">Корпоративні замовлення</a>
-                    <a href="./page/franchise.html" class="header__link">Франшиза</a>
-                    <a href="./page/constructor.html" class="header__link">Конструктор боксів</a>
+                    <a href="../" class="header__link">Головна</a>
+                    <a href="../page/catalog.html" class="header__link">Товари</a>
+                    <a href="../page/about.html" class="header__link">Про нас</a>
+                    <a href="../page/blog.html" class="header__link">Новини</a>
+                    <a href="../page/account.html" class="header__link">Мій акаунт</a>
+                    <a href="../" class="header__link">Кошик</a>
+                    <a href="../page/corporate.html" class="header__link">Корпоративні замовлення</a>
+                    <a href="../page/franchise.html" class="header__link">Франшиза</a>
+                    <a href="../page/constructor.html" class="header__link">Конструктор боксів</a>
                 </li>
                 <li class="col3">
                     <div class="box">

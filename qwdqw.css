@@ -1,0 +1,909 @@
+@charset "UTF-8";
+@import url(../css/base.css);
+@import url(../css/fonts.css);
+:root {
+  --trans: all 0.35s ease-in-out;
+  --color_dark: #453526;
+  --color_lite: #ece5db;
+  --small-text: #2B221B;
+}
+
+header {
+  box-shadow: 0px 0px 14px 0px rgba(84, 72, 61, 0.1);
+  backdrop-filter: blur(17px);
+  background-color: rgba(236, 229, 219, 0.4509803922);
+  width: 100%;
+  padding-block: 10px;
+  position: fixed;
+  z-index: 100;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.h__left {
+  display: flex;
+  align-items: center;
+  z-index: 99999;
+}
+
+.nav__header {
+  display: flex;
+  align-items: center;
+}
+
+.header__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.header__link {
+  color: #453526;
+  font-family: "Avenir Next";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  transition: var(--trans);
+  position: relative;
+}
+.header__link:hover {
+  color: #453526;
+}
+
+.header__link:not(.no_active)::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 1px;
+  background-color: #453526;
+  transition: width 0.35s;
+}
+
+.header__link:not(.no_active):hover:before {
+  width: 100%;
+}
+
+.h__right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.h__right .search {
+  width: 100%;
+  max-width: 140px;
+  position: relative;
+  margin-right: 4px;
+}
+.h__right .search input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #453526;
+  padding-bottom: 1px;
+  color: var(--color_dark);
+  font-family: "Avenir Next";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  width: 100%;
+  transition: var(--trans);
+  outline: none;
+}
+.h__right .search input::placeholder {
+  color: #453526;
+  font-family: "Avenir Next";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.h__right .search input:focus {
+  border-bottom-color: #453526;
+}
+.h__right .search svg {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  right: 0px;
+}
+.h__right .search svg path,
+.h__right .search svg circle {
+  transition: var(--trans);
+}
+.h__right .search input:focus + svg path {
+  stroke: var(--color_dark);
+}
+.h__right .search input:focus + svg circle {
+  stroke: var(--color_dark);
+}
+
+.h__right a,
+.backet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.h__right a svg path,
+.backet svg path {
+  transition: var(--trans);
+}
+.h__right a svg circle,
+.backet svg circle {
+  transition: var(--trans);
+}
+.h__right a:hover svg path,
+.backet:hover svg path {
+  fill: #d1c1a8;
+  stroke: #d1c1a8;
+}
+.h__right a:hover svg circle,
+.backet:hover svg circle {
+  fill: #d1c1a8;
+  stroke: #d1c1a8;
+}
+
+.burger {
+  display: none;
+}
+
+.burger__icon {
+  width: 30px;
+  height: 26px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 99999;
+  position: relative;
+}
+
+.burger__icon div {
+  width: 100%;
+  height: 3px;
+  background-color: #1c1c1c;
+  transition: all 0.3s ease;
+  border-radius: 3px;
+}
+
+.burger__menu {
+  opacity: 1;
+  visibility: visible;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--Clear-White, #fff);
+  padding: 15px;
+  padding-left: 30px;
+  box-sizing: border-box;
+  transition: right 0.3s ease;
+  z-index: 1000;
+  overflow-y: auto;
+  transition: var(--trans);
+  max-height: 100%;
+}
+.burger__menu .btn {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  width: 95%;
+}
+
+.burger__menu.active {
+  right: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+.burger__menu .container {
+  padding: 0px;
+}
+
+.burger__menu .header__list {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+  padding-top: 80px;
+  width: 100%;
+}
+
+.burger__menu .header__item {
+  width: 100%;
+  text-align: start;
+}
+
+.burger__menu .header__link {
+  color: var(--Black, #1d1d1f);
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  transition: var(--trans);
+  position: relative;
+}
+.burger__menu .header__link:hover {
+  color: var(--color_purple);
+}
+
+.header__dropdown_menu_burger .header__link {
+  font-size: 24px;
+}
+
+.burger__icon.active .line1 {
+  transform: rotate(-45deg) translate(-7px, 5px);
+  background-color: #1c1c1c;
+}
+
+.burger__icon.active .line2 {
+  opacity: 0;
+}
+
+.burger__icon.active .line3 {
+  transform: rotate(45deg) translate(-11px, -9px);
+  background-color: #1c1c1c;
+}
+
+.burger__list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-top: 90px !important;
+}
+.burger__list li a {
+  color: #fff;
+  font-family: "Poppins";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.h__center {
+  margin-left: 90px;
+}
+
+.burger {
+  display: none;
+}
+
+@media (max-width: 1150px) {
+  .h__center {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+  .burger__menu.active {
+    display: block;
+  }
+  .burger__icon {
+    display: flex;
+  }
+  .h__right div,
+  .h__right a {
+    display: none;
+  }
+  .h__right {
+    position: absolute;
+    right: 80px;
+    z-index: 9999;
+  }
+}
+.burger__menu .header__list {
+  margin-bottom: 40px;
+}
+
+main {
+  padding-top: 94px;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+.breadcrmb {
+  text-decoration: none;
+  color: var(--color_lite);
+  display: flex;
+  gap: 11px;
+  align-items: center;
+  font-size: 18px;
+  line-height: 24.59px;
+  margin-bottom: 19px;
+  transition: var(--trans);
+}
+
+.breadcrmb path {
+  transition: var(--trans);
+}
+
+.breadcrmb:visited {
+  
+  color: var(--color_lite);
+}
+
+.breadcrmb:hover {
+  color: var(--color_dark);
+}
+
+.breadcrmb:hover path {
+  fill: var(--color_dark);
+  
+}
+
+.breadcrmb p {
+  font-family: "Avenir Next";
+}
+
+
+
+.tab-label {
+  font-family: "Nyght Serif";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  white-space: nowrap;
+  transition: var(--trans);
+  cursor: pointer;
+}
+
+.inputs {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+fieldset {
+  border: none;
+  margin-top: 20px;
+}
+
+legend {
+  font-family: "Avenir Next";
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 27.32px;
+  margin-bottom: 10px;
+  color: var(--color_dark);
+
+}
+
+.input {
+  width: 48%;
+}
+
+.input label {
+  font-family: "Avenir Next";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 13.66px;
+  color: var(--color_lite);
+}
+
+.input input {
+  width: 100%;
+  border: none;
+  font-family: "Avenir Next";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21.86px;
+  color: var(--color_dark);
+  border-bottom: 2px solid var(--color_lite);
+  padding-bottom: 10px;
+  transition: var(--trans);
+}
+
+.selector{
+  border-bottom: 2px solid var(--color_lite);
+  padding-bottom: 10px;
+  transition: var(--trans);
+}
+
+.input input::placeholder {
+  color: var(--color_dark);
+}
+
+.input:hover input, .input:focus-within input, .input:hover .selector, .input:focus-within .selector {
+  border-bottom: 2px solid var(--color_dark);
+}
+
+input:focus-visible {
+  outline: none;
+}
+
+label.checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  font-family: "Avenir Next";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21.86px;
+  color: var(--color_dark);
+  transition: var(--trans);
+  gap: 8px;
+}
+
+.checkbox:hover {
+  color: var(--color_lite);
+}
+
+.checkbox input {
+  display: none;
+}
+
+.checkbox .checkmark {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--color_dark);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--trans);
+  flex-shrink: 0;
+}
+
+.checkbox:hover .checkmark {
+  border-color: var(--color_lite);
+}
+
+.checkmark svg {
+  opacity: 0;
+}
+
+.checkbox input:checked + .checkmark svg {
+  opacity: 1;
+}
+
+.enter {
+  border: none;
+  text-align: center;
+  margin: 0 auto;
+  width: 216px;
+  margin-bottom: 13px;
+  margin-top: 29px;
+}
+
+.forgot-pass {
+  font-family: "Avenir Next";
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 27.32px;
+  color: var(--small-text);
+  position: relative;
+  transition: var(--trans);
+}
+
+.forgot-pass::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px; 
+  background-color: var(--color_dark);
+  transition: width 0.35s;
+}
+
+.forgot-pass:hover::after {
+  width: 100%;
+}
+
+.container-title {
+  border-top: 2px solid var(--color_dark);
+  border-bottom: 2px solid var(--color_dark);
+  font-size: 32px;
+  line-height: 44.8px;
+  padding: 20px 0;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: auto !important;
+  bottom: 21px !important;
+  margin-top: 0 !important;
+  width: 20px;
+  height: 31px;
+  z-index: 11;
+}
+
+.swiper-button-prev svg {
+  transform: scaleX(-1);
+}
+
+.swiper-button-prev svg, .swiper-button-next svg {
+  pointer-events: none;
+}
+
+.swiper-button-prev::after, .swiper-button-next::after {
+  display: none;
+}
+
+.swiper-button-prev path, .swiper-button-next path {
+  transition: var(--trans);
+}
+
+.swiper-button-prev:hover path, .swiper-button-next:hover path {
+  fill: var(--color_dark);
+}
+
+.add-to-cart {
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.add-to-cart::before {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    max-width: 200px;
+    content: "";
+    background: -webkit-gradient(linear, right top, left top, color-stop(14%, rgba(255, 255, 255, 0)), to(rgb(255, 255, 255)));
+    background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 14%, rgb(255, 255, 255) 100%);
+    z-index: 2;
+  }
+  .add-to-cart::after {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    max-width: 200px;
+    content: "";
+    background: -webkit-gradient(linear, left top, right top, color-stop(14%, rgba(255, 255, 255, 0)), to(rgb(255, 255, 255)));
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 14%, rgb(255, 255, 255) 100%);
+    z-index: 2;
+  }
+
+.add-to-cart-header {
+    margin-bottom: 51px;
+    position: relative;
+    z-index: 3;
+    font-size: 32px;
+}
+  
+span.like.active svg path,
+span.shop.active svg path {
+  fill: #e8e0d3 !important;
+  transition: fill 0.3s ease;
+}
+  
+.add-to-cart #swiper2 {
+  height: 420px;
+  z-index: unset;
+}
+.add-to-cart #swiper2 .slide_link {
+  height: 100%;
+  display: block;
+}
+.add-to-cart #swiper2 .slide_link:hover .btn {
+  opacity: 1;
+}
+.add-to-cart #swiper2 .slide_img {
+  background-color: #000;
+  position: relative;
+  height: 277px;
+  width: 100%;
+}
+.add-to-cart #swiper2 .swiper-button-prev {
+  left: 100px;
+  bottom: 0 !important;
+}
+.add-to-cart #swiper2 .swiper-button-next {
+  right: 100px;
+  bottom: 0 !important;
+}
+.add-to-cart #swiper2 .swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.add-to-cart #swiper2 .btn {
+  position: absolute;
+  z-index: 3;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  opacity: 0;
+  transition: var(--trans);
+}
+.add-to-cart #swiper2 .btn span {
+  width: 32px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  transition: var(--trans);
+  cursor: pointer;
+}
+.add-to-cart #swiper2 .btn span svg path {
+  transition: var(--trans);
+}
+.add-to-cart #swiper2 .btn span:hover {
+  background-color: rgba(232, 224, 211, 0.3);
+}
+.add-to-cart #swiper2 .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 296px !important;
+  height: 385px !important;
+}
+.add-to-cart #swiper2 .swiper-slide img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  margin-right: auto;
+  margin-left: auto;
+}
+.add-to-cart #swiper2 .swiper-slide .slide_info {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 17px;
+}
+.add-to-cart #swiper2 .swiper-slide .slide_info h3 {
+  color: var(--small-text, #2b221b);
+  text-align: center;
+  font-family: "Avenir Next";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.add-to-cart #swiper2 .swiper-slide .slide_info h4 {
+  margin-top: 8px;
+  color: var(--small-text, #2b221b);
+  font-family: "Avenir Next";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.add-to-cart #swiper2 .swiper-slide .slide_info h4 span {
+  text-decoration-line: line-through;
+}
+.add-to-cart #swiper2 .slide_link {
+  width: 100%;
+}
+.add-to-cart #swiper2 span.like.active svg path,
+.add-to-cart #swiper2 span.shop.active svg path {
+  fill: #e8e0d3 !important;
+  transition: fill 0.3s ease;
+}
+.add-to-cart #swiper2 span.like svg path,
+.add-to-cart #swiper2 span.shop svg path {
+  transition: fill 0.3s ease;
+}
+
+@media (max-width: 1019px) {
+  h2 {
+    margin: 0 auto;
+  }
+
+  .breadcrmb {
+    margin-bottom: 17px;
+  }
+
+  h2 {
+    font-size: 32px;
+    line-height: 44.8px;
+    margin-bottom: 37px;
+  }
+
+  .flex-container {
+    flex-direction: column-reverse;
+  }
+
+  .left, .right {
+    width: 98%;
+    margin: 0 auto;
+  }
+
+  .inputs {
+    margin-bottom: 40px;
+    flex-direction: column;
+  }
+
+  .input {
+    width: 100%;
+  }
+
+  .add-to-cart {
+    margin-bottom: 0;
+  }
+
+  .add-to-cart::before, .add-to-cart::after {
+    display: none;
+  }
+
+  .add-to-cart-header {
+    margin-bottom: 30px;
+  }
+
+  .add-to-cart #swiper2 .swiper-button-prev, 
+  .add-to-cart #swiper2 .swiper-button-next {
+    display: none;
+  }
+}
+
+footer .top {
+    background: #d1c1a8;
+    padding-block: 80px;
+  }
+  footer .top .grid4 {
+    display: grid;
+    grid-template-columns: 180px 1fr 1fr 1fr;
+    gap: 90px;
+    padding-left: 50px;
+    padding-right: 50px;
+    position: relative;
+  }
+  footer .top .grid4 .btn_home {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+  }
+  footer .top .grid4 .btn_home svg path {
+    transition: var(--trans);
+  }
+  footer .top .grid4 .btn_home:hover svg path {
+    fill: var(--color_dark) !important;
+  }
+  footer .top .col1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  footer .top .col1 .soc {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+    margin-top: 60px;
+  }
+  footer .top .col1 .soc a svg path {
+    transition: var(--trans);
+  }
+  footer .top .col1 .soc a:hover svg path {
+    fill: var(--color_dark);
+  }
+  footer .top .col2 {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 5px;
+  }
+  footer .top .col2 a {
+    color: #453526;
+    font-family: "Avenir Next";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  footer .top .col3 {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+  }
+  footer .top .col3 .box {
+    display: flex;
+    justify-content: start;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  footer .top .col3 .box .info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  footer .top .col3 .box .info h3 {
+    color: #453526;
+    font-family: "Nyght Serif";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 5px;
+  }
+  footer .top .col3 .box .info p {
+    color: #453526;
+    font-family: "Avenir Next";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 5px;
+  }
+  footer .top .col4 .box {
+    display: flex;
+    justify-content: start;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  footer .top .col4 .box a {
+    color: #453526;
+    font-family: "Avenir Next";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  footer .bot {
+    padding-block: 10px;
+  }
+  footer .bot .grid5 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+  footer .bot .grid5 p,
+  footer .bot .grid5 a {
+    color: var(--small-text, #2b221b);
+    text-align: center;
+    font-family: "Avenir Next";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  @media (max-width: 1050px) {
+    footer .top .grid4, footer .bot .grid5 {
+      grid-template-columns: auto;
+      justify-items: start;
+    }
+
+    footer .top .grid4 {
+      gap: 35px;
+      padding: 0;
+    }
+
+    footer .bot .grid5 {
+      gap: 19px;
+      margin-top: 24px;
+      margin-bottom: 26px;
+    }
+
+    footer .top .col1 {
+      justify-self: center;
+    }
+
+    footer .top .col3 .box:last-child {
+      margin-bottom: 0;
+    }
+    
+  }

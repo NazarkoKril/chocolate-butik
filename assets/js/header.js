@@ -16,28 +16,28 @@
                                     <a href="../" class="header__link">Головна</a>
                                 </li>
                                 <li class="header__item">
-                                    <a href="./page/catalog.html" class="header__link">Товари</a>
+                                    <a href="../page/catalog.html" class="header__link">Товари</a>
                                 </li>
                                 <li class="header__item">
-                                    <a href="./page/about.html" class="header__link">Про нас</a>
+                                    <a href="../page/about.html" class="header__link">Про нас</a>
                                 </li>
                                 <li class="header__item">
-                                    <a href="./page/blog.html" class="header__link">Новини</a>
+                                    <a href="../page/blog.html" class="header__link">Новини</a>
                                 </li>
                                 <li class="header__item">
-                                    <a href="./page/account.html" class="header__link">Мій акаунт</a>
+                                    <a href="../page/account.html" class="header__link">Мій акаунт</a>
                                 </li>
                                 <li class="header__item">
-                                    <a href="./page/blog.html" class="header__link">Улюблені</a>
+                                    <a href="../page/blog.html" class="header__link">Улюблені</a>
                                 </li>
                                 <li class="header__item">
-                                    <a href="./page/corporate.html" class="header__link">Корпоративні замовлення</a>
+                                    <a href="../page/corporate.html" class="header__link">Корпоративні замовлення</a>
                                 </li>
                                 <li class="header__item">
-                                    <a href="./page/franchise.html" class="header__link">Франшиза</a>
+                                    <a href="../page/franchise.html" class="header__link">Франшиза</a>
                                 </li>
                                 <li class="header__item">
-                                    <a href="./page/box.html" class="header__link">Конструктор боксів</a>
+                                    <a href="../page/box.html" class="header__link">Конструктор боксів</a>
                                 </li>
                             </ul>
                             <div class="footer__l">
@@ -60,19 +60,19 @@
                                 <a href="../" class="header__link">Головна</a>
                             </li>
                             <li class="header__item">
-                                <a href="./page/catalog.html" class="header__link">Товари</a>
+                                <a href="../page/catalog.html" class="header__link">Товари</a>
                             </li>
                             <li class="header__item">
-                                <a href="./page/about.html" class="header__link">Про нас</a>
+                                <a href="../page/about.html" class="header__link">Про нас</a>
                             </li>
                             <li class="header__item">
-                                <a href="./page/blog.html" class="header__link">Новини</a>
+                                <a href="../page/blog.html" class="header__link">Новини</a>
                             </li>
                             <li class="header__item">
-                                <a href="./page/corporate.html" class="header__link">Корпоративні замовлення</a>
+                                <a href="../page/corporate.html" class="header__link">Корпоративні замовлення</a>
                             </li>
                             <li class="header__item">
-                                <a href="./page/franchise.html" class="header__link">Франшиза</a>
+                                <a href="../page/franchise.html" class="header__link">Франшиза</a>
                             </li>
     
                         </ul>
