@@ -31,6 +31,10 @@ body {
 img {
   width: 100%;
   display: block;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .dark_btn {

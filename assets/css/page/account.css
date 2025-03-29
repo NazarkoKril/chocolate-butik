@@ -37,7 +37,11 @@ h2 {
 .tab-content {
     display: none;
 }
-    
+
+#home{
+    padding-top: 100px;
+}
+
 .tabs:has(#tab2:checked) ~ #content2,
 .tabs:has(#tab3:checked) ~ #content3,
 .tabs:has(#tab4:checked) ~ #content4,
@@ -157,7 +161,7 @@ table {
 }
 
 th, td {
-    padding: 7px;
+    padding: 10px;
     text-align: left;
 }
 
@@ -186,7 +190,9 @@ td, .actions button, td span {
     display: flex;
     gap: 34px;
 }
-
+.flex-container{
+    display: flex;
+}
 .actions button {
     border: none;
     cursor: pointer;
@@ -324,8 +330,8 @@ h4 {
     background: black; 
     border-radius: 50%;
     position: absolute;
-    top: 2.2px;
-    left: 2.5px;
+    top: 2px;
+    left: 2px;
 }
 
 .option-content {
@@ -333,7 +339,7 @@ h4 {
 }
 
 .option-content .name {
-    margin-bottom: 8px;
+    margin-bottom: 13px;
     font-family: "Avenir Next";
     font-weight: 500;
     font-size: 20px;
@@ -347,7 +353,7 @@ h4 {
     font-size: 16px;
     line-height: 100%;
     color: var(--small_text);
-    margin-bottom: 2px;
+    margin-bottom: 5px;
 }
 
 .redo {
@@ -432,6 +438,8 @@ h4 {
 
 .item img {
     width: 100%;
+    height: 380px;
+    object-fit: cover;
 }
 
 .item-desc {
@@ -488,7 +496,7 @@ h4 {
 
 @media (max-width: 969px) {
     .item {
-        width: 296px;
+        width: 100%;
     }
 }
 
@@ -531,5 +539,10 @@ h4 {
         flex-direction: column;
         gap: 36px;
         align-items: center;
+    }
+}
+@media (max-width:900px) {
+    .item img{
+        height: 380px;
     }
 }

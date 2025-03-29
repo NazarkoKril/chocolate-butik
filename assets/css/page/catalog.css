@@ -517,7 +517,9 @@ span.shop.active svg path {
   height: 277px;
   width: 100%;
 }
-
+.filters-content .lite_btn{
+    white-space: nowrap;
+}
 
 .you-have-seen #swiper2 .swiper-wrapper {
   width: 100%;

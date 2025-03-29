@@ -25,7 +25,7 @@
                                     <a href="../page/blog.html" class="header__link">Новини</a>
                                 </li>
                                 <li class="header__item">
-                                    <a href="../page/account.html" class="header__link">Мій акаунт</a>
+                                    <a href="../page/sign-in.html" class="header__link">Мій акаунт</a>
                                 </li>
                                 <li class="header__item">
                                     <a href="../page/blog.html" class="header__link">Улюблені</a>
@@ -88,7 +88,7 @@
                               </svg>
                         </div>
                     </form>
-                    <a href="./page/login.html">
+                    <a href="../page/sign-in.html">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <circle cx="2.93023" cy="2.93023" r="2.93023" transform="matrix(-1 0 0 1 10.2402 6.88086)"
                                 fill="#453526" stroke="#453526" stroke-width="1.5" />
@@ -97,7 +97,7 @@
                                 fill="#453526" stroke="#453526" stroke-width="1.5" />
                         </svg>
                     </a>
-                    <a href="./page/login.html">
+                    <a href="../page/love.html">
                         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="24" viewBox="0 0 26 24" fill="none">
                             <path
                                 d="M2.42919 14.7269L6.52424 18.9669C7.70367 20.1881 9.66058 20.1881 10.84 18.9669L14.9351 14.7269C16.5978 13.0053 16.5978 10.214 14.9351 8.49238C13.2723 6.77077 10.5765 6.77077 8.91372 8.49238C8.78714 8.62344 8.57712 8.62344 8.45054 8.49238C6.78779 6.77077 4.09194 6.77077 2.42919 8.49238C0.766441 10.214 0.766442 13.0053 2.42919 14.7269Z"
@@ -238,7 +238,7 @@
                 <h5>До оплати без доставки</h5>
                 <h4 class="price result_price">45 ₴</h4>
             </div>
-            <button class="lite_btn">Оформити замовлення</button>
+            <a href="../page/cart.html" class="lite_btn">Оформити замовлення</a>
         </div>
     </header>
     `

@@ -39,6 +39,8 @@ body {
 img {
   width: 100%;
   display: block;
+  user-select: none;
+
 }
 .dark_btn {
   color: var(--second, #ece5db);

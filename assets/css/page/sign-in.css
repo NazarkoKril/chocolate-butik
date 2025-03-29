@@ -5,7 +5,9 @@
 .sign-up {
     padding-top: 35px;
 }
-
+#home{
+    padding-top: 100px;
+}
 .sign-up .input:has(.checkbox) {
     border: none;
     padding-bottom: 0;
@@ -67,13 +69,28 @@
 .for-checkbox {
     display: none;
 }
-
+.flex-container {
+    display: flex
+;
+    justify-content: space-evenly;
+}
+.left, .right {
+    width: 48%;
+}
 @media (max-width: 1019px) {
+    .left, .right {
+        width: 100%;
+    }
     h2 {
         margin-bottom: 18px;
-        max-width: 250px;
+       
     }
-
+    h2 {
+        font-size: 32px !important;
+        line-height: 44.8px;
+        margin-bottom: 37px;
+        text-align: center;
+    }
     .flex-container {
         flex-direction: column;
     }
@@ -81,8 +98,12 @@
     .inputs {
         margin-bottom: 20px;
         gap: 20px;
+        flex-direction: column;
+        width: 100%;
     }
-
+.input {
+    width: 100%;
+}
     .inputs-container {
         position: relative;
     }
