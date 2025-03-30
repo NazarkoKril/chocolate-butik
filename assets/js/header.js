@@ -10,34 +10,34 @@
                     </div>
                     <div class="burger__menu">
                         <div class="container">
-                            <img src="../assets/img/logo_big.svg" alt="logo">
+                            <img src="/assets/img/logo_big.svg" alt="logo">
                             <ul class="header__list">
                                 <li class="header__item">
-                                    <a href="../" class="header__link">Головна</a>
+                                    <a href="/" class="header__link">Головна</a>
                                 </li>
                                 <li class="header__item">
-                                    <a href="../page/catalog.html" class="header__link">Товари</a>
+                                    <a href="/page/catalog.html" class="header__link">Товари</a>
                                 </li>
                                 <li class="header__item">
-                                    <a href="../page/about.html" class="header__link">Про нас</a>
+                                    <a href="/page/about.html" class="header__link">Про нас</a>
                                 </li>
                                 <li class="header__item">
-                                    <a href="../page/blog.html" class="header__link">Новини</a>
+                                    <a href="/page/blog.html" class="header__link">Новини</a>
                                 </li>
                                 <li class="header__item">
-                                    <a href="../page/sign-in.html" class="header__link">Мій акаунт</a>
+                                    <a href="/page/sign-in.html" class="header__link">Мій акаунт</a>
                                 </li>
                                 <li class="header__item">
-                                    <a href="../page/blog.html" class="header__link">Улюблені</a>
+                                    <a href="/page/blog.html" class="header__link">Улюблені</a>
                                 </li>
                                 <li class="header__item">
-                                    <a href="../page/corporate.html" class="header__link">Корпоративні замовлення</a>
+                                    <a href="/page/corporate.html" class="header__link">Корпоративні замовлення</a>
                                 </li>
                                 <li class="header__item">
-                                    <a href="../page/franchise.html" class="header__link">Франшиза</a>
+                                    <a href="/page/franchise.html" class="header__link">Франшиза</a>
                                 </li>
                                 <li class="header__item">
-                                    <a href="../page/box.html" class="header__link">Конструктор боксів</a>
+                                    <a href="/page/box.html" class="header__link">Конструктор боксів</a>
                                 </li>
                             </ul>
                             <div class="footer__l">
@@ -49,7 +49,7 @@
                     </div>
                 </div>
                 <div class="h__left">
-                    <a href="../">
+                    <a href="/">
                         <svg xmlns="http://www.w3.org/2000/svg" width="58" height="39" viewBox="0 0 58 39" fill="none">
                             <path d="M57.4805 1.52302V0H44.6432V1.52302L48.3183 2.57649V36.7662H31.4838V2.57649L35.1589 1.52302V0H22.3216V1.52302L25.9967 2.57649V36.7662H9.15619V2.57649L12.8373 1.52302V0H0V1.52302L3.67512 2.57649V36.2606L0 37.308V38.834H57.4805V37.308L53.8024 36.2606V2.57649L57.4805 1.52302Z" fill="#453526"/>
                           </svg>    
@@ -57,22 +57,22 @@
                     <nav class="h__center">
                         <ul class="header__list">
                             <li class="header__item">
-                                <a href="../" class="header__link">Головна</a>
+                                <a href="/" class="header__link">Головна</a>
                             </li>
                             <li class="header__item">
-                                <a href="../page/catalog.html" class="header__link">Товари</a>
+                                <a href="/page/catalog.html" class="header__link">Товари</a>
                             </li>
                             <li class="header__item">
-                                <a href="../page/about.html" class="header__link">Про нас</a>
+                                <a href="/page/about.html" class="header__link">Про нас</a>
                             </li>
                             <li class="header__item">
-                                <a href="../page/blog.html" class="header__link">Новини</a>
+                                <a href="/page/blog.html" class="header__link">Новини</a>
                             </li>
                             <li class="header__item">
-                                <a href="../page/corporate.html" class="header__link">Корпоративні замовлення</a>
+                                <a href="/page/corporate.html" class="header__link">Корпоративні замовлення</a>
                             </li>
                             <li class="header__item">
-                                <a href="../page/franchise.html" class="header__link">Франшиза</a>
+                                <a href="/page/franchise.html" class="header__link">Франшиза</a>
                             </li>
     
                         </ul>
@@ -88,7 +88,7 @@
                               </svg>
                         </div>
                     </form>
-                    <a href="../page/sign-in.html">
+                    <a href="/page/sign-in.html">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <circle cx="2.93023" cy="2.93023" r="2.93023" transform="matrix(-1 0 0 1 10.2402 6.88086)"
                                 fill="#453526" stroke="#453526" stroke-width="1.5" />
@@ -97,7 +97,7 @@
                                 fill="#453526" stroke="#453526" stroke-width="1.5" />
                         </svg>
                     </a>
-                    <a href="../page/love.html">
+                    <a href="/page/love.html">
                         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="24" viewBox="0 0 26 24" fill="none">
                             <path
                                 d="M2.42919 14.7269L6.52424 18.9669C7.70367 20.1881 9.66058 20.1881 10.84 18.9669L14.9351 14.7269C16.5978 13.0053 16.5978 10.214 14.9351 8.49238C13.2723 6.77077 10.5765 6.77077 8.91372 8.49238C8.78714 8.62344 8.57712 8.62344 8.45054 8.49238C6.78779 6.77077 4.09194 6.77077 2.42919 8.49238C0.766441 10.214 0.766442 13.0053 2.42919 14.7269Z"
@@ -130,7 +130,7 @@
                 <li>
                     <div class="top">
                         <div class="image">
-                            <img src="../assets/img/candy/img1.png" alt="candy">
+                            <img src="/assets/img/candy/img1.png" alt="candy">
                         </div>
                         <p>Шоколадні цукерки "Молочне серце”</p>
                         <h4 class="price">45 ₴</h4>
@@ -145,7 +145,7 @@
                 <li>
                     <div class="top">
                         <div class="image">
-                            <img src="../assets/img/candy/img1.png" alt="candy">
+                            <img src="/assets/img/candy/img1.png" alt="candy">
                         </div>
                         <p>Шоколадні цукерки "Молочне серце”</p>
                         <h4 class="price">45 ₴</h4>
@@ -160,7 +160,7 @@
                 <li>
                     <div class="top">
                         <div class="image">
-                            <img src="../assets/img/candy/img1.png" alt="candy">
+                            <img src="/assets/img/candy/img1.png" alt="candy">
                         </div>
                         <p>Шоколадні цукерки "Молочне серце”</p>
                         <h4 class="price">45 ₴</h4>
@@ -175,7 +175,7 @@
                 <li>
                     <div class="top">
                         <div class="image">
-                            <img src="../assets/img/candy/img1.png" alt="candy">
+                            <img src="/assets/img/candy/img1.png" alt="candy">
                         </div>
                         <p>Шоколадні цукерки "Молочне серце”</p>
                         <h4 class="price">45 ₴</h4>
@@ -190,7 +190,7 @@
                 <li>
                     <div class="top">
                         <div class="image">
-                            <img src="../assets/img/candy/img1.png" alt="candy">
+                            <img src="/assets/img/candy/img1.png" alt="candy">
                         </div>
                         <p>Шоколадні цукерки "Молочне серце”</p>
                         <h4 class="price">45 ₴</h4>
@@ -205,7 +205,7 @@
                 <li>
                     <div class="top">
                         <div class="image">
-                            <img src="../assets/img/candy/img1.png" alt="candy">
+                            <img src="/assets/img/candy/img1.png" alt="candy">
                         </div>
                         <p>Шоколадні цукерки "Молочне серце”</p>
                         <h4 class="price">45 ₴</h4>
@@ -220,7 +220,7 @@
                 <li>
                     <div class="top">
                         <div class="image">
-                            <img src="../assets/img/candy/img1.png" alt="candy">
+                            <img src="/assets/img/candy/img1.png" alt="candy">
                         </div>
                         <p>Шоколадні цукерки "Молочне серце”</p>
                         <h4 class="price">45 ₴</h4>
@@ -238,7 +238,7 @@
                 <h5>До оплати без доставки</h5>
                 <h4 class="price result_price">45 ₴</h4>
             </div>
-            <a href="../page/cart.html" class="lite_btn">Оформити замовлення</a>
+            <a href="/page/cart.html" class="lite_btn">Оформити замовлення</a>
         </div>
     </header>
     `

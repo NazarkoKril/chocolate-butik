@@ -22,7 +22,7 @@ main {
 }
 
 .hero_page .bg {
-    height: 100vh;
+    height: 100svh;
     width: auto;
     object-fit: cover;
     position: absolute;

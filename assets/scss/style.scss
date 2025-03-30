@@ -200,7 +200,7 @@ header {
   top: 0;
   right: -100%;
   width: 100%;
-  height: 100vh;
+  height: 100svh;
   background: var(--second, #ece5db);
   box-shadow: 0px 0px 14px 0px rgba(84, 72, 61, 0.1);
   padding: 50px;
@@ -209,7 +209,7 @@ header {
   z-index: 99;
   overflow-y: auto;
   transition: var(--trans);
-  max-height: 100vh;
+  max-height: 100svh;
 
   .btn {
     position: absolute;
@@ -1961,7 +1961,7 @@ footer {
 .backet_main {
   position: absolute;
   width: 100%;
-  height: 100vh;
+  height: 100svh;
   z-index: 1000;
   background: var(--white, #fff);
   box-shadow: 0px 0px 14px 0px rgba(84, 72, 61, 0.1);
@@ -2018,7 +2018,7 @@ footer {
     flex-grow: 1;
     overflow-y: auto;
     overflow-x: hidden;
-    max-height: calc(100vh - 200px);
+    max-height: calc(100svh - 200px);
 
     li {
       display: flex;
@@ -2415,8 +2415,65 @@ text-align: center;
 .small_page{
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100svh;
   justify-content: space-between;
+}
+.done_tamplate{
+  margin-bottom: 30px;
+  
+  .you-have-seen-header{
+    margin-bottom: 40px;
+  }
+  .gallery-pagination{
+    margin-top: 30px;
+  }
+  .grid3{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 22px;
+  }
+  li{
+    position: relative;
+    
+    &:hover{
+      .absolute_btn{
+        opacity: 1;
+            }
+            .img_cont::after{
+              opacity: 1;
+            }
+    } 
+    
+  }
+  .img_cont{
+    height: 380px;
+    position: relative;
+    &::after{
+      position: absolute;
+      transition: var(--trans);
+      width: 100%;
+      height: 100%;
+      left: 0px;
+      top: 0px;
+      content: "";
+      background: rgba(255, 255, 255, 0.70);
+      opacity: 0;
+    }
+    img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .absolute_btn{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-wrap: nowrap;
+    opacity: 0;
+   
+  }
 }
 @media (max-width: 1930px) {
    #swiper2 .swiper-button-next {
@@ -2430,8 +2487,13 @@ text-align: center;
   .blog .product-gallery{
     grid-template-columns: 1fr 1fr 1fr;
   }
+  
 }
+
 @media (max-width: 1250px) {
+  .done_tamplate .grid3{
+    grid-template-columns: 1fr 1fr;
+  }
   .sect_about.about h2 {
     font-size: 102px;
   }
@@ -2467,6 +2529,22 @@ text-align: center;
 }
 
 @media (max-width: 900px) {
+  .done_tamplate li:hover .img_cont::after{
+    opacity: 0;
+  }
+  .done_tamplate .absolute_btn{
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    opacity: 1;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+  }
+  .done_tamplate .grid3{
+    grid-template-columns: 1fr;
+  }
   .blog .grid2{
     grid-template-columns: 1fr;
   }
@@ -2540,7 +2618,7 @@ text-align: center;
     height: 35px !important;
   }
   #swiper {
-    height: 100vh;
+    height: 100svh;
   }
   .sect_2 .animate_svg {
     bottom: -30%;
