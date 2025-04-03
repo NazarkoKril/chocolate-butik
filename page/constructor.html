@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- css -->
-    
+
     <link rel="stylesheet" href="/assets/css/page/catalog.css">
+    <link rel="stylesheet" href="/assets/css/page/constructor.css">
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css">
     <!-- fonts -->
@@ -21,71 +22,504 @@
 
 <body>
     <div class="header_component"></div>
-  
+
     <main id="home">
         <div class="container">
             <div class="breadcrambs">
                 <a href="/">Головна</a>
                 <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8 -3.11854e-07L12 0L12 10L12 20L8 20L-9.90966e-07 10L8 -3.11854e-07Z" fill="#ECE5DB"/>
+                    <path d="M8 -3.11854e-07L12 0L12 10L12 20L8 20L-9.90966e-07 10L8 -3.11854e-07Z" fill="#ECE5DB" />
                 </svg>
                 <a href="#">Зібрати бокс</a>
             </div>
         </div>
-       <section class="done_tamplate">
-        <svg class="animate_svg" xmlns="http://www.w3.org/2000/svg" width="1528" height="540" viewBox="0 0 1528 540" fill="none">
-            <path class="animate_path" opacity="0.8" d="M1675 317.983C1614.98 206.621 1425.58 73.1031 1156.35 117.415C887.125 161.726 798 509.969 891.5 533.469C987.602 557.623 1005.88 464.326 971.5 342.469C937.118 220.612 829.319 -52.0832 401 11.469C56.9999 62.5102 166.5 342.469 242.5 304.969C317.001 268.208 251 -7.031 -149 117.415" stroke="#ECE5DB" stroke-width="2"/>
-          </svg>
-        <div class="container">
-            <h3 class="you-have-seen-header">Готові шаблони:</h3>
-<ul class="grid3">
-<li>
-    <div class="img_cont">
-        <img src="/assets/img/other/template1.jpg" alt="photo template box candy">
-    </div>
-    <button class="dark_btn absolute_btn">Додати бокс у кошик</button>
-</li>
-<li>
-    <div class="img_cont">
-        <img src="/assets/img/other/template1.jpg" alt="photo template box candy">
-    </div>
-    <button class="dark_btn absolute_btn">Додати бокс у кошик</button>
-</li>
-<li>
-    <div class="img_cont">
-        <img src="/assets/img/other/template1.jpg" alt="photo template box candy">
-    </div>
-    <button class="dark_btn absolute_btn">Додати бокс у кошик</button>
-</li>
-</ul>
-        </div>
-        <div class="gallery-pagination">
-            <div class="pagination-buttons">
-                <button class="page-arrow page-arrow-prev" disabled>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="31" viewBox="0 0 20 31" fill="none">
-                    <path d="M6.34576 31L0 31L-6.77527e-07 15.5L-1.35505e-06 0L6.34576 -7.2751e-07L19.0373 15.5L6.34576 31Z" fill="#ECE5DB"/>
-                </svg>
-            </button>
-            <button class="page-number active">1</button>
-            <button class="page-number">2</button>
-            <button class="page-number">3</button>
-            <span class="dots">...</span>
-            <button class="page-number">17</button>
-            <button class="page-number">18</button>
-            <button class="page-number">19</button>
-            <button class="page-arrow page-arrow-next">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="31" viewBox="0 0 20 31" fill="none">
-                    <path d="M6.34576 31L0 31L-6.77527e-07 15.5L-1.35505e-06 0L6.34576 -7.2751e-07L19.0373 15.5L6.34576 31Z" fill="#ECE5DB"/>
-                </svg>
-            </button>
+
+        <section class="configurator_sect">
+            <div class="container">
+
+                <div class="grid2-1">
+                    <div class=""></div>
+                    <div class="flex">
+                        <h1>Збери СВІЙ бокс!</h1>
+                        <button class="randoms">Рандомізувати</button>
+                    </div>
+                </div>
+
+                <div class="grid2">
+                    <div class="box-preview">
+                        <!-- Regular view (perspective) -->
+                        <img src="/assets/img/constructor/box/box3.png" alt="Box" class="box-image" id="boxImage">
+
+                        <!-- Top view for candy placement -->
+                        <div class="box-top-view" id="boxTopView">
+                            <img src="/assets/img/constructor/box/box3.1.png" alt="Box Top View" id="topViewImage">
+                            <div class="box-grid" id="boxGrid"></div>
+                        </div>
+                    </div>
+
+                    <div class="configurator">
+
+
+
+                        <div class="tabs">
+                            <div class="tab active_tab" data-tab="material">Матеріал</div>
+                            <div class="tab" data-tab="color">Колір</div>
+                            <div class="tab" data-tab="shape">Форма</div>
+                            <div class="tab" data-tab="quantity">Кількість</div>
+                            <div class="tab" data-tab="candy">Цукерки</div>
+                        </div>
+
+                        <!-- Material options -->
+                        <div class="options-container active_option" data-content="material">
+                            <div class="options-grid">
+                                <div class="option material-option selected" data-value="cardboard" data-price="100">
+                                    <div class="image_box">
+                                        <img src="/assets/img/constructor/material/cardboard.png" alt="Картон">
+                                        <p class="none">цього варіанту немає для цієї опції, будь ласка, оберіть щось
+                                            інше</p>
+                                    </div>
+                                    <div class="right">
+                                        <div class="option-name">Картон</div>
+                                        <div class="option-price">45 ₴</div>
+                                    </div>
+
+                                </div>
+                                <div class="option material-option " data-value="wood" data-price="250">
+                                    <div class="image_box">
+                                        <img src="/assets/img/constructor/material/wood.png" alt="Картон">
+                                        <p class="none">цього варіанту немає для цієї опції, будь ласка, оберіть щось
+                                            інше</p>
+                                    </div>
+                                    <div class="right">
+                                        <div class="option-name">Дерево</div>
+                                        <div class="option-price">45 ₴</div>
+                                    </div>
+                                </div>
+                                <div class="option material-option none_item" data-value="velvet" data-price="300">
+                                    <div class="image_box">
+                                        <img src="/assets/img/constructor/material/velvet.png" alt="Картон">
+                                        <p class="none">цього варіанту немає для цієї опції, будь ласка, оберіть щось
+                                            інше</p>
+                                    </div>
+                                    <div class="right">
+                                        <div class="option-name">Велюр</div>
+                                        <div class="option-price">45 ₴</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Color options -->
+                        <div class="options-container " data-content="color">
+                            <div class="options-grid">
+                                <div class="option selected" data-value="red" data-price="0">
+                                    <div class="image_box">
+                                        <div class="color_box"></div>
+                                        <p class="none">цього варіанту немає для цієї опції, будь ласка, оберіть щось
+                                            інше</p>
+                                    </div>
+                                    <div class="right">
+                                        <div class="option-name">Червоний</div>
+                                    </div>
+                                </div>
+                                <div class="option none_item" data-value="yellow" data-price="0">
+                                    <div class="image_box">
+                                        <div class="color_box"></div>
+                                        <p class="none">цього варіанту немає для цієї опції, будь ласка, оберіть щось
+                                            інше</p>
+                                    </div>
+                                    <div class="right">
+                                        <div class="option-name">Жовтий</div>
+                                    </div>
+                                </div>
+                                <div class="option " data-value="green" data-price="0">
+                                    <div class="image_box">
+                                        <div class="color_box"></div>
+                                        <p class="none">цього варіанту немає для цієї опції, будь ласка, оберіть щось
+                                            інше</p>
+                                    </div>
+                                    <div class="right">
+                                        <div class="option-name">Зелений</div>
+                                    </div>
+                                </div>
+                                <div class="option " data-value="blue" data-price="0">
+                                    <div class="image_box">
+                                        <div class="color_box"></div>
+                                        <p class="none">цього варіанту немає для цієї опції, будь ласка, оберіть щось
+                                            інше</p>
+                                    </div>
+                                    <div class="right">
+                                        <div class="option-name">Синій</div>
+                                    </div>
+                                </div>
+                                <div class="option " data-value="pink" data-price="0">
+                                    <div class="image_box">
+                                        <div class="color_box"></div>
+                                        <p class="none">цього варіанту немає для цієї опції, будь ласка, оберіть щось
+                                            інше</p>
+                                    </div>
+                                    <div class="right">
+                                        <div class="option-name">Рожевий</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Shape options -->
+                        <div class="options-container " data-content="shape">
+                            <div class="options-grid">
+                                <div class="option  " data-value="square" data-price="0">
+                                    <div class="image_box">
+                                        <img src="/assets/img/constructor/form/square.png" alt="Квадрат">
+                                        <p class="none">цього варіанту немає для цієї опції, будь ласка, оберіть щось
+                                            інше</p>
+                                    </div>
+                                    <div class="right">
+                                        <div class="option-name">Квадрат</div>
+                                    </div>
+                                </div>
+                                <div class="option  none_item" data-value="circle" data-price="50">
+                                    <div class="image_box">
+                                        <img src="/assets/img/constructor/form/circle.png" alt="Коло">
+                                        <p class="none">цього варіанту немає для цієї опції, будь ласка, оберіть щось
+                                            інше</p>
+                                    </div>
+                                    <div class="right">
+                                        <div class="option-name">Коло</div>
+                                    </div>
+                                </div>
+                                <div class="option selected" data-value="square-rounded" data-price="100">
+                                    <div class="image_box">
+                                        <img src="/assets/img/constructor/form/square-rounded.png"
+                                            alt="Квадрат з кришкою">
+                                        <p class="none">цього варіанту немає для цієї опції, будь ласка, оберіть щось
+                                            інше</p>
+                                    </div>
+                                    <div class="right">
+                                        <div class="option-name">Квадрат з кришкою</div>
+                                    </div>
+                                </div>
+
+                                <div class="option " data-value="heart" data-price="200">
+                                    <div class="image_box">
+                                        <img src="/assets/img/constructor/form/heart.png" alt="Серце">
+                                        <p class="none">цього варіанту немає для цієї опції, будь ласка, оберіть щось
+                                            інше</p>
+                                    </div>
+                                    <div class="right">
+                                        <div class="option-name">Серце</div>
+                                    </div>
+                                </div>
+                                <div class="option " data-value="rectangle" data-price="100">
+                                    <div class="image_box">
+                                        <img src="/assets/img/constructor/form/rectangle.png" alt="Прямокутник">
+                                        <p class="none">цього варіанту немає для цієї опції, будь ласка, оберіть щось
+                                            інше</p>
+                                    </div>
+                                    <div class="right">
+                                        <div class="option-name">Прямокутник</div>
+                                    </div>
+                                </div>
+                                <div class="option " data-value="rectangle-window" data-price="100">
+                                    <div class="image_box">
+                                        <img src="/assets/img/constructor/form/rectangle.png" alt="Прямокутник">
+                                        <p class="none">цього варіанту немає для цієї опції, будь ласка, оберіть щось
+                                            інше</p>
+                                    </div>
+                                    <div class="right">
+                                        <div class="option-name">Прямокутник</div>
+                                    </div>
+                                </div>
+                                <div class="option " data-value="circle-window" data-price="0">
+                                    <div class="image_box">
+                                        <img src="/assets/img/constructor/form/circle-window.png" alt="Коло з віконцем">
+                                        <p class="none">цього варіанту немає для цієї опції, будь ласка, оберіть щось
+                                            інше</p>
+                                    </div>
+                                    <div class="right">
+                                        <div class="option-name">Коло з віконцем</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quantity options -->
+                        <div class="options-container " data-content="quantity">
+                            <div class="options-grid">
+                                <div class="option " data-value="4" data-grid="2x2" data-price="0">
+                                    <div class="image_box">
+                                        <div class="quant">4</div>
+                                        <p class="none">цього варіанту немає для цієї опції, будь ласка, оберіть щось
+                                            інше</p>
+                                    </div>
+                                    <div class="right">
+                                        <div class="option-name quant_name">На 4 цукерки</div>
+                                    </div>
+                                </div>
+                                <div class="option none_item" data-value="6" data-grid="3x2" data-price="50">
+                                    <div class="image_box">
+                                        <div class="quant">6</div>
+                                        <p class="none">цього варіанту немає для цієї опції, будь ласка, оберіть щось
+                                            інше</p>
+                                    </div>
+                                    <div class="right">
+                                        <div class="option-name quant_name">На 6 цукерки</div>
+                                    </div>
+                                </div>
+                                <div class="option selected" data-value="9" data-grid="3x3" data-price="100">
+                                    <div class="image_box">
+                                        <div class="quant">9</div>
+                                        <p class="none">цього варіанту немає для цієї опції, будь ласка, оберіть щось
+                                            інше</p>
+                                    </div>
+                                    <div class="right">
+                                        <div class="option-name quant_name">На 9 цукерки</div>
+                                    </div>
+                                </div>
+                                <div class="option" data-value="12" data-grid="3x4" data-price="150">
+                                    <div class="image_box">
+                                        <div class="quant">12</div>
+                                        <p class="none">цього варіанту немає для цієї опції, будь ласка, оберіть щось
+                                            інше</p>
+                                    </div>
+                                    <div class="right">
+                                        <div class="option-name quant_name">На 12 цукерки</div>
+                                    </div>
+                                </div>
+                                <div class="option" data-value="16" data-grid="4x4" data-price="200">
+                                    <div class="image_box">
+                                        <div class="quant">16</div>
+                                        <p class="none">цього варіанту немає для цієї опції, будь ласка, оберіть щось
+                                            інше</p>
+                                    </div>
+                                    <div class="right">
+                                        <div class="option-name quant_name">На 16 цукерки</div>
+                                    </div>
+                                </div>
+                                <div class="option" data-value="24" data-grid="4x6" data-price="250">
+                                    <div class="image_box">
+                                        <div class="quant">24</div>
+                                        <p class="none">цього варіанту немає для цієї опції, будь ласка, оберіть щось
+                                            інше</p>
+                                    </div>
+                                    <div class="right">
+                                        <div class="option-name quant_name">На 24 цукерки</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Candy options -->
+
+                        <div class="options-container candy-option" data-content="candy">
+                            <button class="dark_btn btn_candy">Випадкова розкладка</button>
+                            <div class="candies-grid">
+                                <div class="option candy " data-value="candy1" data-price="20">
+                                    <div class="image_box">
+                                        <img src="/assets/img/constructor/candy/10.png" alt="серце">
+                                        <p class="none">цього варіанту немає для цієї опції, будь ласка, оберіть щось
+                                            інше</p>
+                                    </div>
+                                </div>
+                                <div class="option candy" data-value="candy2" data-price="25">
+                                    <div class="image_box">
+                                        <img src="/assets/img/constructor/candy/9.png" alt="серце">
+                                        <p class="none">цього варіанту немає для цієї опції, будь ласка, оберіть щось
+                                            інше</p>
+                                    </div>
+                                </div>
+                                <div class="option candy" data-value="candy3" data-price="30">
+                                    <div class="image_box">
+                                        <img src="/assets/img/constructor/candy/8.png" alt="серце">
+                                        <p class="none">цього варіанту немає для цієї опції, будь ласка, оберіть щось
+                                            інше</p>
+                                    </div>
+                                </div>
+                                <div class="option candy" data-value="candy4" data-price="35">
+                                    <div class="image_box">
+                                        <img src="/assets/img/constructor/candy/7.png" alt="серце">
+                                        <p class="none">цього варіанту немає для цієї опції, будь ласка, оберіть щось
+                                            інше</p>
+                                    </div>
+                                </div>
+                                <div class="option candy" data-value="candy5" data-price="25">
+                                    <div class="image_box">
+                                        <img src="/assets/img/constructor/candy/6.png" alt="серце">
+                                        <p class="none">цього варіанту немає для цієї опції, будь ласка, оберіть щось
+                                            інше</p>
+                                    </div>
+                                </div>
+                                <div class="candy option" data-value="candy6" data-price="20">
+                                    <div class="image_box">
+                                        <img src="/assets/img/constructor/candy/5.png" alt="серце">
+                                        <p class="none">цього варіанту немає для цієї опції, будь ласка, оберіть щось
+                                            інше</p>
+                                    </div>
+                                </div>
+                                <div class="option candy" data-value="candy7" data-price="30">
+                                    <div class="image_box">
+                                        <img src="/assets/img/constructor/candy/4.png" alt="серце">
+                                        <p class="none">цього варіанту немає для цієї опції, будь ласка, оберіть щось
+                                            інше</p>
+                                    </div>
+                                </div>
+                                <div class="option candy" data-value="candy8" data-price="40">
+                                    <div class="image_box">
+                                        <img src="/assets/img/constructor/candy/3.png" alt="серце">
+                                        <p class="none">цього варіанту немає для цієї опції, будь ласка, оберіть щось
+                                            інше</p>
+                                    </div>
+                                </div>
+                                <div class="option candy" data-value="candy9" data-price="40">
+                                    <div class="image_box">
+                                        <img src="/assets/img/constructor/candy/2.png" alt="серце">
+                                        <p class="none">цього варіанту немає для цієї опції, будь ласка, оберіть щось
+                                            інше</p>
+                                    </div>
+                                </div>
+                                <div class="option candy" data-value="candy10" data-price="40">
+                                    <div class="image_box">
+                                        <img src="/assets/img/constructor/candy/1.png" alt="серце">
+                                        <p class="none">цього варіанту немає для цієї опції, будь ласка, оберіть щось
+                                            інше</p>
+                                    </div>
+                                </div>
+                                <div class="option candy" data-value="candy4" data-price="35">
+                                    <div class="image_box">
+                                        <img src="/assets/img/constructor/candy/7.png" alt="серце">
+                                        <p class="none">цього варіанту немає для цієї опції, будь ласка, оберіть щось
+                                            інше</p>
+                                    </div>
+                                </div>
+                                <div class="option candy" data-value="candy5" data-price="25">
+                                    <div class="image_box">
+                                        <img src="/assets/img/constructor/candy/6.png" alt="серце">
+                                        <p class="none">цього варіанту немає для цієї опції, будь ласка, оберіть щось
+                                            інше</p>
+                                    </div>
+                                </div>
+                                <div class="option candy" data-value="candy6" data-price="20">
+                                    <div class="image_box">
+                                        <img src="/assets/img/constructor/candy/5.png" alt="серце">
+                                        <p class="none">цього варіанту немає для цієї опції, будь ласка, оберіть щось
+                                            інше</p>
+                                    </div>
+                                </div>
+                                <div class="option candy" data-value="candy7" data-price="30">
+                                    <div class="image_box">
+                                        <img src="/assets/img/constructor/candy/4.png" alt="серце">
+                                        <p class="none">цього варіанту немає для цієї опції, будь ласка, оберіть щось
+                                            інше</p>
+                                    </div>
+                                </div>
+                                <div class="option candy" data-value="candy8" data-price="40">
+                                    <div class="image_box">
+                                        <img src="/assets/img/constructor/candy/3.png" alt="серце">
+                                        <p class="none">цього варіанту немає для цієї опції, будь ласка, оберіть щось
+                                            інше</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="price-container">
+                            <div class="price">4545 ₴</div>
+                            <div class="btn_add">
+                                <button class="lite_btn">Додати бокс у кошик</button>
+                                <p class="">Ви не заповнили весь бокс! Оберіть ще варіант!</p>
+                            </div>
+
+                        </div>
+                        <div class="candy-info" id="candyInfo">
+                            <button id="close_info">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
+                                    fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M5.37367 5.99005L0.803711 10.56L1.81713 11.5734L6.3871 7.00347L10.9379 11.5543L11.9322 10.56L7.3814 6.00917L11.9514 1.4392L10.9379 0.425781L6.36798 4.99575L1.79801 0.425781L0.803711 1.42008L5.37367 5.99005ZM1.11018 10.5605L5.67961 5.9911L5.67909 5.99057L1.10965 10.56L1.11018 10.5605ZM11.6263 10.56L11.6258 10.5605L7.07546 6.01022L7.07598 6.00969L11.6263 10.56ZM11.6454 1.4392L11.6449 1.43973L10.9379 0.73277L6.36798 5.30273L1.79801 0.732771L1.11017 1.42061L1.10965 1.42008L1.79801 0.731721L6.36798 5.30168L10.9379 0.73172L11.6454 1.4392Z"
+                                        fill="#453526" />
+                                </svg></button>
+                            <h3 class="title_candy_info">Цукерка “Молочне серце”</h3>
+                            <h4 class="price_candy_info">45 ₴</h4>
+                            <p class="desct_candy_info">
+                                Шоколадна цукерка ручної роботи "Серце" складається з молочного шоколаду і ніжного
+                                кокосового праліне. Особлива технологія виготовлення, поєднання кольорів та блиску надає
+                                цим цукерок дивовижний вид.
+                                <br><br>
+                                Оригінальний подарунок коханій людині, який створить романтичну атмосферу. При
+                                виготовленні використовуються тільки натуральні компоненти високої якості.
+                                 </p>
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
-          </div>
-       </section>
+        </section>
+
+        <section class="done_tamplate">
+            <svg class="animate_svg" xmlns="http://www.w3.org/2000/svg" width="1528" height="540" viewBox="0 0 1528 540"
+                fill="none">
+                <path class="animate_path" opacity="0.8"
+                    d="M1675 317.983C1614.98 206.621 1425.58 73.1031 1156.35 117.415C887.125 161.726 798 509.969 891.5 533.469C987.602 557.623 1005.88 464.326 971.5 342.469C937.118 220.612 829.319 -52.0832 401 11.469C56.9999 62.5102 166.5 342.469 242.5 304.969C317.001 268.208 251 -7.031 -149 117.415"
+                    stroke="#ECE5DB" stroke-width="2" />
+            </svg>
+            <div class="container">
+                <h3 class="you-have-seen-header">Готові шаблони:</h3>
+                <ul class="grid3">
+                    <li>
+                        <div class="img_cont">
+                            <img src="/assets/img/other/template1.jpg" alt="photo template box candy">
+                        </div>
+                        <button class="dark_btn absolute_btn">Додати бокс у кошик</button>
+                    </li>
+                    <li>
+                        <div class="img_cont">
+                            <img src="/assets/img/other/template1.jpg" alt="photo template box candy">
+                        </div>
+                        <button class="dark_btn absolute_btn">Додати бокс у кошик</button>
+                    </li>
+                    <li>
+                        <div class="img_cont">
+                            <img src="/assets/img/other/template1.jpg" alt="photo template box candy">
+                        </div>
+                        <button class="dark_btn absolute_btn">Додати бокс у кошик</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="gallery-pagination">
+                <div class="pagination-buttons">
+                    <button class="page-arrow page-arrow-prev" disabled>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="31" viewBox="0 0 20 31" fill="none">
+                            <path
+                                d="M6.34576 31L0 31L-6.77527e-07 15.5L-1.35505e-06 0L6.34576 -7.2751e-07L19.0373 15.5L6.34576 31Z"
+                                fill="#ECE5DB" />
+                        </svg>
+                    </button>
+                    <button class="page-number active">1</button>
+                    <button class="page-number">2</button>
+                    <button class="page-number">3</button>
+                    <span class="dots">...</span>
+                    <button class="page-number">17</button>
+                    <button class="page-number">18</button>
+                    <button class="page-number">19</button>
+                    <button class="page-arrow page-arrow-next">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="31" viewBox="0 0 20 31" fill="none">
+                            <path
+                                d="M6.34576 31L0 31L-6.77527e-07 15.5L-1.35505e-06 0L6.34576 -7.2751e-07L19.0373 15.5L6.34576 31Z"
+                                fill="#ECE5DB" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
         <div class="you-have-seen">
             <div class="container">
                 <h3 class="you-have-seen-header">Додати до кошика:</h3>
             </div>
-                
+
             <div class="swiper" id="swiper2">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -94,16 +528,23 @@
                                 <img loading="lazy" src="/assets/img/candy/img2.png" alt="photo candy">
                                 <div class="btn">
                                     <span class="like">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                            <path d="M3.66275 13.2136L9.82377 19.7066C11.0068 20.9533 12.9932 20.9534 14.1762 19.7066L20.3372 13.2136C22.5542 10.8771 22.5543 7.08895 20.3373 4.75248C18.1203 2.416 14.5258 2.416 12.3088 4.75248V4.75248C12.1409 4.92938 11.8591 4.92938 11.6912 4.75248V4.75248C9.47421 2.416 5.87975 2.416 3.66275 4.75248C1.44575 7.08895 1.44575 10.8771 3.66275 13.2136Z" stroke="#E8E0D3" stroke-width="1.5"/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none">
+                                            <path
+                                                d="M3.66275 13.2136L9.82377 19.7066C11.0068 20.9533 12.9932 20.9534 14.1762 19.7066L20.3372 13.2136C22.5542 10.8771 22.5543 7.08895 20.3373 4.75248C18.1203 2.416 14.5258 2.416 12.3088 4.75248V4.75248C12.1409 4.92938 11.8591 4.92938 11.6912 4.75248V4.75248C9.47421 2.416 5.87975 2.416 3.66275 4.75248C1.44575 7.08895 1.44575 10.8771 3.66275 13.2136Z"
+                                                stroke="#E8E0D3" stroke-width="1.5" />
                                         </svg>
                                     </span>
                                     <span class="shop">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
-                                            <path d="M1 1L2.04936 1.20987C2.91136 1.38227 3.55973 2.09732 3.6472 2.97203L3.8 4.5M3.8 4.5L4.7886 12.7383C4.90922 13.7435 5.76195 14.5 6.77435 14.5H15.7673C17.3733 14.5 18.7733 13.407 19.1628 11.8489L20.2855 7.35783C20.6485 5.90619 19.5505 4.5 18.0542 4.5H3.8Z" stroke="#E8E0D3" stroke-width="1.5" stroke-linecap="round"/>
-                                            <path d="M12 11.5H8" stroke="#E8E0D3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <circle cx="7.5" cy="18" r="1.5" fill="#E8E0D3"/>
-                                            <circle cx="16.5" cy="18" r="1.5" fill="#E8E0D3"/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20"
+                                            viewBox="0 0 22 20" fill="none">
+                                            <path
+                                                d="M1 1L2.04936 1.20987C2.91136 1.38227 3.55973 2.09732 3.6472 2.97203L3.8 4.5M3.8 4.5L4.7886 12.7383C4.90922 13.7435 5.76195 14.5 6.77435 14.5H15.7673C17.3733 14.5 18.7733 13.407 19.1628 11.8489L20.2855 7.35783C20.6485 5.90619 19.5505 4.5 18.0542 4.5H3.8Z"
+                                                stroke="#E8E0D3" stroke-width="1.5" stroke-linecap="round" />
+                                            <path d="M12 11.5H8" stroke="#E8E0D3" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <circle cx="7.5" cy="18" r="1.5" fill="#E8E0D3" />
+                                            <circle cx="16.5" cy="18" r="1.5" fill="#E8E0D3" />
                                         </svg>
                                     </span>
                                 </div>
@@ -123,16 +564,23 @@
                                 <img loading="lazy" src="/assets/img/candy/img3.png" alt="photo candy">
                                 <div class="btn">
                                     <span class="like">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                            <path d="M3.66275 13.2136L9.82377 19.7066C11.0068 20.9533 12.9932 20.9534 14.1762 19.7066L20.3372 13.2136C22.5542 10.8771 22.5543 7.08895 20.3373 4.75248C18.1203 2.416 14.5258 2.416 12.3088 4.75248V4.75248C12.1409 4.92938 11.8591 4.92938 11.6912 4.75248V4.75248C9.47421 2.416 5.87975 2.416 3.66275 4.75248C1.44575 7.08895 1.44575 10.8771 3.66275 13.2136Z" stroke="#E8E0D3" stroke-width="1.5"/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none">
+                                            <path
+                                                d="M3.66275 13.2136L9.82377 19.7066C11.0068 20.9533 12.9932 20.9534 14.1762 19.7066L20.3372 13.2136C22.5542 10.8771 22.5543 7.08895 20.3373 4.75248C18.1203 2.416 14.5258 2.416 12.3088 4.75248V4.75248C12.1409 4.92938 11.8591 4.92938 11.6912 4.75248V4.75248C9.47421 2.416 5.87975 2.416 3.66275 4.75248C1.44575 7.08895 1.44575 10.8771 3.66275 13.2136Z"
+                                                stroke="#E8E0D3" stroke-width="1.5" />
                                         </svg>
                                     </span>
                                     <span class="shop">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
-                                            <path d="M1 1L2.04936 1.20987C2.91136 1.38227 3.55973 2.09732 3.6472 2.97203L3.8 4.5M3.8 4.5L4.7886 12.7383C4.90922 13.7435 5.76195 14.5 6.77435 14.5H15.7673C17.3733 14.5 18.7733 13.407 19.1628 11.8489L20.2855 7.35783C20.6485 5.90619 19.5505 4.5 18.0542 4.5H3.8Z" stroke="#E8E0D3" stroke-width="1.5" stroke-linecap="round"/>
-                                            <path d="M12 11.5H8" stroke="#E8E0D3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <circle cx="7.5" cy="18" r="1.5" fill="#E8E0D3"/>
-                                            <circle cx="16.5" cy="18" r="1.5" fill="#E8E0D3"/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20"
+                                            viewBox="0 0 22 20" fill="none">
+                                            <path
+                                                d="M1 1L2.04936 1.20987C2.91136 1.38227 3.55973 2.09732 3.6472 2.97203L3.8 4.5M3.8 4.5L4.7886 12.7383C4.90922 13.7435 5.76195 14.5 6.77435 14.5H15.7673C17.3733 14.5 18.7733 13.407 19.1628 11.8489L20.2855 7.35783C20.6485 5.90619 19.5505 4.5 18.0542 4.5H3.8Z"
+                                                stroke="#E8E0D3" stroke-width="1.5" stroke-linecap="round" />
+                                            <path d="M12 11.5H8" stroke="#E8E0D3" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <circle cx="7.5" cy="18" r="1.5" fill="#E8E0D3" />
+                                            <circle cx="16.5" cy="18" r="1.5" fill="#E8E0D3" />
                                         </svg>
                                     </span>
                                 </div>
@@ -152,16 +600,23 @@
                                 <img loading="lazy" src="/assets/img/candy/img4.png" alt="photo candy">
                                 <div class="btn">
                                     <span class="like">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                            <path d="M3.66275 13.2136L9.82377 19.7066C11.0068 20.9533 12.9932 20.9534 14.1762 19.7066L20.3372 13.2136C22.5542 10.8771 22.5543 7.08895 20.3373 4.75248C18.1203 2.416 14.5258 2.416 12.3088 4.75248V4.75248C12.1409 4.92938 11.8591 4.92938 11.6912 4.75248V4.75248C9.47421 2.416 5.87975 2.416 3.66275 4.75248C1.44575 7.08895 1.44575 10.8771 3.66275 13.2136Z" stroke="#E8E0D3" stroke-width="1.5"/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none">
+                                            <path
+                                                d="M3.66275 13.2136L9.82377 19.7066C11.0068 20.9533 12.9932 20.9534 14.1762 19.7066L20.3372 13.2136C22.5542 10.8771 22.5543 7.08895 20.3373 4.75248C18.1203 2.416 14.5258 2.416 12.3088 4.75248V4.75248C12.1409 4.92938 11.8591 4.92938 11.6912 4.75248V4.75248C9.47421 2.416 5.87975 2.416 3.66275 4.75248C1.44575 7.08895 1.44575 10.8771 3.66275 13.2136Z"
+                                                stroke="#E8E0D3" stroke-width="1.5" />
                                         </svg>
                                     </span>
                                     <span class="shop">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
-                                            <path d="M1 1L2.04936 1.20987C2.91136 1.38227 3.55973 2.09732 3.6472 2.97203L3.8 4.5M3.8 4.5L4.7886 12.7383C4.90922 13.7435 5.76195 14.5 6.77435 14.5H15.7673C17.3733 14.5 18.7733 13.407 19.1628 11.8489L20.2855 7.35783C20.6485 5.90619 19.5505 4.5 18.0542 4.5H3.8Z" stroke="#E8E0D3" stroke-width="1.5" stroke-linecap="round"/>
-                                            <path d="M12 11.5H8" stroke="#E8E0D3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <circle cx="7.5" cy="18" r="1.5" fill="#E8E0D3"/>
-                                            <circle cx="16.5" cy="18" r="1.5" fill="#E8E0D3"/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20"
+                                            viewBox="0 0 22 20" fill="none">
+                                            <path
+                                                d="M1 1L2.04936 1.20987C2.91136 1.38227 3.55973 2.09732 3.6472 2.97203L3.8 4.5M3.8 4.5L4.7886 12.7383C4.90922 13.7435 5.76195 14.5 6.77435 14.5H15.7673C17.3733 14.5 18.7733 13.407 19.1628 11.8489L20.2855 7.35783C20.6485 5.90619 19.5505 4.5 18.0542 4.5H3.8Z"
+                                                stroke="#E8E0D3" stroke-width="1.5" stroke-linecap="round" />
+                                            <path d="M12 11.5H8" stroke="#E8E0D3" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <circle cx="7.5" cy="18" r="1.5" fill="#E8E0D3" />
+                                            <circle cx="16.5" cy="18" r="1.5" fill="#E8E0D3" />
                                         </svg>
                                     </span>
                                 </div>
@@ -181,16 +636,23 @@
                                 <img loading="lazy" src="/assets/img/candy/img5.png" alt="photo candy">
                                 <div class="btn">
                                     <span class="like">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                            <path d="M3.66275 13.2136L9.82377 19.7066C11.0068 20.9533 12.9932 20.9534 14.1762 19.7066L20.3372 13.2136C22.5542 10.8771 22.5543 7.08895 20.3373 4.75248C18.1203 2.416 14.5258 2.416 12.3088 4.75248V4.75248C12.1409 4.92938 11.8591 4.92938 11.6912 4.75248V4.75248C9.47421 2.416 5.87975 2.416 3.66275 4.75248C1.44575 7.08895 1.44575 10.8771 3.66275 13.2136Z" stroke="#E8E0D3" stroke-width="1.5"/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none">
+                                            <path
+                                                d="M3.66275 13.2136L9.82377 19.7066C11.0068 20.9533 12.9932 20.9534 14.1762 19.7066L20.3372 13.2136C22.5542 10.8771 22.5543 7.08895 20.3373 4.75248C18.1203 2.416 14.5258 2.416 12.3088 4.75248V4.75248C12.1409 4.92938 11.8591 4.92938 11.6912 4.75248V4.75248C9.47421 2.416 5.87975 2.416 3.66275 4.75248C1.44575 7.08895 1.44575 10.8771 3.66275 13.2136Z"
+                                                stroke="#E8E0D3" stroke-width="1.5" />
                                         </svg>
                                     </span>
                                     <span class="shop">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
-                                            <path d="M1 1L2.04936 1.20987C2.91136 1.38227 3.55973 2.09732 3.6472 2.97203L3.8 4.5M3.8 4.5L4.7886 12.7383C4.90922 13.7435 5.76195 14.5 6.77435 14.5H15.7673C17.3733 14.5 18.7733 13.407 19.1628 11.8489L20.2855 7.35783C20.6485 5.90619 19.5505 4.5 18.0542 4.5H3.8Z" stroke="#E8E0D3" stroke-width="1.5" stroke-linecap="round"/>
-                                            <path d="M12 11.5H8" stroke="#E8E0D3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <circle cx="7.5" cy="18" r="1.5" fill="#E8E0D3"/>
-                                            <circle cx="16.5" cy="18" r="1.5" fill="#E8E0D3"/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20"
+                                            viewBox="0 0 22 20" fill="none">
+                                            <path
+                                                d="M1 1L2.04936 1.20987C2.91136 1.38227 3.55973 2.09732 3.6472 2.97203L3.8 4.5M3.8 4.5L4.7886 12.7383C4.90922 13.7435 5.76195 14.5 6.77435 14.5H15.7673C17.3733 14.5 18.7733 13.407 19.1628 11.8489L20.2855 7.35783C20.6485 5.90619 19.5505 4.5 18.0542 4.5H3.8Z"
+                                                stroke="#E8E0D3" stroke-width="1.5" stroke-linecap="round" />
+                                            <path d="M12 11.5H8" stroke="#E8E0D3" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <circle cx="7.5" cy="18" r="1.5" fill="#E8E0D3" />
+                                            <circle cx="16.5" cy="18" r="1.5" fill="#E8E0D3" />
                                         </svg>
                                     </span>
                                 </div>
@@ -210,16 +672,23 @@
                                 <img loading="lazy" src="/assets/img/candy/img1.png" alt="photo candy">
                                 <div class="btn">
                                     <span class="like">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                            <path d="M3.66275 13.2136L9.82377 19.7066C11.0068 20.9533 12.9932 20.9534 14.1762 19.7066L20.3372 13.2136C22.5542 10.8771 22.5543 7.08895 20.3373 4.75248C18.1203 2.416 14.5258 2.416 12.3088 4.75248V4.75248C12.1409 4.92938 11.8591 4.92938 11.6912 4.75248V4.75248C9.47421 2.416 5.87975 2.416 3.66275 4.75248C1.44575 7.08895 1.44575 10.8771 3.66275 13.2136Z" stroke="#E8E0D3" stroke-width="1.5"/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none">
+                                            <path
+                                                d="M3.66275 13.2136L9.82377 19.7066C11.0068 20.9533 12.9932 20.9534 14.1762 19.7066L20.3372 13.2136C22.5542 10.8771 22.5543 7.08895 20.3373 4.75248C18.1203 2.416 14.5258 2.416 12.3088 4.75248V4.75248C12.1409 4.92938 11.8591 4.92938 11.6912 4.75248V4.75248C9.47421 2.416 5.87975 2.416 3.66275 4.75248C1.44575 7.08895 1.44575 10.8771 3.66275 13.2136Z"
+                                                stroke="#E8E0D3" stroke-width="1.5" />
                                         </svg>
                                     </span>
                                     <span class="shop">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
-                                            <path d="M1 1L2.04936 1.20987C2.91136 1.38227 3.55973 2.09732 3.6472 2.97203L3.8 4.5M3.8 4.5L4.7886 12.7383C4.90922 13.7435 5.76195 14.5 6.77435 14.5H15.7673C17.3733 14.5 18.7733 13.407 19.1628 11.8489L20.2855 7.35783C20.6485 5.90619 19.5505 4.5 18.0542 4.5H3.8Z" stroke="#E8E0D3" stroke-width="1.5" stroke-linecap="round"/>
-                                            <path d="M12 11.5H8" stroke="#E8E0D3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <circle cx="7.5" cy="18" r="1.5" fill="#E8E0D3"/>
-                                            <circle cx="16.5" cy="18" r="1.5" fill="#E8E0D3"/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20"
+                                            viewBox="0 0 22 20" fill="none">
+                                            <path
+                                                d="M1 1L2.04936 1.20987C2.91136 1.38227 3.55973 2.09732 3.6472 2.97203L3.8 4.5M3.8 4.5L4.7886 12.7383C4.90922 13.7435 5.76195 14.5 6.77435 14.5H15.7673C17.3733 14.5 18.7733 13.407 19.1628 11.8489L20.2855 7.35783C20.6485 5.90619 19.5505 4.5 18.0542 4.5H3.8Z"
+                                                stroke="#E8E0D3" stroke-width="1.5" stroke-linecap="round" />
+                                            <path d="M12 11.5H8" stroke="#E8E0D3" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <circle cx="7.5" cy="18" r="1.5" fill="#E8E0D3" />
+                                            <circle cx="16.5" cy="18" r="1.5" fill="#E8E0D3" />
                                         </svg>
                                     </span>
                                 </div>
@@ -239,16 +708,23 @@
                                 <img loading="lazy" src="/assets/img/candy/img6.png" alt="photo candy">
                                 <div class="btn">
                                     <span class="like">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                            <path d="M3.66275 13.2136L9.82377 19.7066C11.0068 20.9533 12.9932 20.9534 14.1762 19.7066L20.3372 13.2136C22.5542 10.8771 22.5543 7.08895 20.3373 4.75248C18.1203 2.416 14.5258 2.416 12.3088 4.75248V4.75248C12.1409 4.92938 11.8591 4.92938 11.6912 4.75248V4.75248C9.47421 2.416 5.87975 2.416 3.66275 4.75248C1.44575 7.08895 1.44575 10.8771 3.66275 13.2136Z" stroke="#E8E0D3" stroke-width="1.5"/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none">
+                                            <path
+                                                d="M3.66275 13.2136L9.82377 19.7066C11.0068 20.9533 12.9932 20.9534 14.1762 19.7066L20.3372 13.2136C22.5542 10.8771 22.5543 7.08895 20.3373 4.75248C18.1203 2.416 14.5258 2.416 12.3088 4.75248V4.75248C12.1409 4.92938 11.8591 4.92938 11.6912 4.75248V4.75248C9.47421 2.416 5.87975 2.416 3.66275 4.75248C1.44575 7.08895 1.44575 10.8771 3.66275 13.2136Z"
+                                                stroke="#E8E0D3" stroke-width="1.5" />
                                         </svg>
                                     </span>
                                     <span class="shop">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
-                                            <path d="M1 1L2.04936 1.20987C2.91136 1.38227 3.55973 2.09732 3.6472 2.97203L3.8 4.5M3.8 4.5L4.7886 12.7383C4.90922 13.7435 5.76195 14.5 6.77435 14.5H15.7673C17.3733 14.5 18.7733 13.407 19.1628 11.8489L20.2855 7.35783C20.6485 5.90619 19.5505 4.5 18.0542 4.5H3.8Z" stroke="#E8E0D3" stroke-width="1.5" stroke-linecap="round"/>
-                                            <path d="M12 11.5H8" stroke="#E8E0D3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <circle cx="7.5" cy="18" r="1.5" fill="#E8E0D3"/>
-                                            <circle cx="16.5" cy="18" r="1.5" fill="#E8E0D3"/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20"
+                                            viewBox="0 0 22 20" fill="none">
+                                            <path
+                                                d="M1 1L2.04936 1.20987C2.91136 1.38227 3.55973 2.09732 3.6472 2.97203L3.8 4.5M3.8 4.5L4.7886 12.7383C4.90922 13.7435 5.76195 14.5 6.77435 14.5H15.7673C17.3733 14.5 18.7733 13.407 19.1628 11.8489L20.2855 7.35783C20.6485 5.90619 19.5505 4.5 18.0542 4.5H3.8Z"
+                                                stroke="#E8E0D3" stroke-width="1.5" stroke-linecap="round" />
+                                            <path d="M12 11.5H8" stroke="#E8E0D3" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <circle cx="7.5" cy="18" r="1.5" fill="#E8E0D3" />
+                                            <circle cx="16.5" cy="18" r="1.5" fill="#E8E0D3" />
                                         </svg>
                                     </span>
                                 </div>
@@ -268,16 +744,23 @@
                                 <img loading="lazy" src="/assets/img/candy/img2.png" alt="photo candy">
                                 <div class="btn">
                                     <span class="like">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                            <path d="M3.66275 13.2136L9.82377 19.7066C11.0068 20.9533 12.9932 20.9534 14.1762 19.7066L20.3372 13.2136C22.5542 10.8771 22.5543 7.08895 20.3373 4.75248C18.1203 2.416 14.5258 2.416 12.3088 4.75248V4.75248C12.1409 4.92938 11.8591 4.92938 11.6912 4.75248V4.75248C9.47421 2.416 5.87975 2.416 3.66275 4.75248C1.44575 7.08895 1.44575 10.8771 3.66275 13.2136Z" stroke="#E8E0D3" stroke-width="1.5"/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none">
+                                            <path
+                                                d="M3.66275 13.2136L9.82377 19.7066C11.0068 20.9533 12.9932 20.9534 14.1762 19.7066L20.3372 13.2136C22.5542 10.8771 22.5543 7.08895 20.3373 4.75248C18.1203 2.416 14.5258 2.416 12.3088 4.75248V4.75248C12.1409 4.92938 11.8591 4.92938 11.6912 4.75248V4.75248C9.47421 2.416 5.87975 2.416 3.66275 4.75248C1.44575 7.08895 1.44575 10.8771 3.66275 13.2136Z"
+                                                stroke="#E8E0D3" stroke-width="1.5" />
                                         </svg>
                                     </span>
                                     <span class="shop">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
-                                            <path d="M1 1L2.04936 1.20987C2.91136 1.38227 3.55973 2.09732 3.6472 2.97203L3.8 4.5M3.8 4.5L4.7886 12.7383C4.90922 13.7435 5.76195 14.5 6.77435 14.5H15.7673C17.3733 14.5 18.7733 13.407 19.1628 11.8489L20.2855 7.35783C20.6485 5.90619 19.5505 4.5 18.0542 4.5H3.8Z" stroke="#E8E0D3" stroke-width="1.5" stroke-linecap="round"/>
-                                            <path d="M12 11.5H8" stroke="#E8E0D3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <circle cx="7.5" cy="18" r="1.5" fill="#E8E0D3"/>
-                                            <circle cx="16.5" cy="18" r="1.5" fill="#E8E0D3"/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20"
+                                            viewBox="0 0 22 20" fill="none">
+                                            <path
+                                                d="M1 1L2.04936 1.20987C2.91136 1.38227 3.55973 2.09732 3.6472 2.97203L3.8 4.5M3.8 4.5L4.7886 12.7383C4.90922 13.7435 5.76195 14.5 6.77435 14.5H15.7673C17.3733 14.5 18.7733 13.407 19.1628 11.8489L20.2855 7.35783C20.6485 5.90619 19.5505 4.5 18.0542 4.5H3.8Z"
+                                                stroke="#E8E0D3" stroke-width="1.5" stroke-linecap="round" />
+                                            <path d="M12 11.5H8" stroke="#E8E0D3" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <circle cx="7.5" cy="18" r="1.5" fill="#E8E0D3" />
+                                            <circle cx="16.5" cy="18" r="1.5" fill="#E8E0D3" />
                                         </svg>
                                     </span>
                                 </div>
@@ -297,16 +780,23 @@
                                 <img loading="lazy" src="/assets/img/candy/img3.png" alt="photo candy">
                                 <div class="btn">
                                     <span class="like">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                            <path d="M3.66275 13.2136L9.82377 19.7066C11.0068 20.9533 12.9932 20.9534 14.1762 19.7066L20.3372 13.2136C22.5542 10.8771 22.5543 7.08895 20.3373 4.75248C18.1203 2.416 14.5258 2.416 12.3088 4.75248V4.75248C12.1409 4.92938 11.8591 4.92938 11.6912 4.75248V4.75248C9.47421 2.416 5.87975 2.416 3.66275 4.75248C1.44575 7.08895 1.44575 10.8771 3.66275 13.2136Z" stroke="#E8E0D3" stroke-width="1.5"/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none">
+                                            <path
+                                                d="M3.66275 13.2136L9.82377 19.7066C11.0068 20.9533 12.9932 20.9534 14.1762 19.7066L20.3372 13.2136C22.5542 10.8771 22.5543 7.08895 20.3373 4.75248C18.1203 2.416 14.5258 2.416 12.3088 4.75248V4.75248C12.1409 4.92938 11.8591 4.92938 11.6912 4.75248V4.75248C9.47421 2.416 5.87975 2.416 3.66275 4.75248C1.44575 7.08895 1.44575 10.8771 3.66275 13.2136Z"
+                                                stroke="#E8E0D3" stroke-width="1.5" />
                                         </svg>
                                     </span>
                                     <span class="shop">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
-                                            <path d="M1 1L2.04936 1.20987C2.91136 1.38227 3.55973 2.09732 3.6472 2.97203L3.8 4.5M3.8 4.5L4.7886 12.7383C4.90922 13.7435 5.76195 14.5 6.77435 14.5H15.7673C17.3733 14.5 18.7733 13.407 19.1628 11.8489L20.2855 7.35783C20.6485 5.90619 19.5505 4.5 18.0542 4.5H3.8Z" stroke="#E8E0D3" stroke-width="1.5" stroke-linecap="round"/>
-                                            <path d="M12 11.5H8" stroke="#E8E0D3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <circle cx="7.5" cy="18" r="1.5" fill="#E8E0D3"/>
-                                            <circle cx="16.5" cy="18" r="1.5" fill="#E8E0D3"/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20"
+                                            viewBox="0 0 22 20" fill="none">
+                                            <path
+                                                d="M1 1L2.04936 1.20987C2.91136 1.38227 3.55973 2.09732 3.6472 2.97203L3.8 4.5M3.8 4.5L4.7886 12.7383C4.90922 13.7435 5.76195 14.5 6.77435 14.5H15.7673C17.3733 14.5 18.7733 13.407 19.1628 11.8489L20.2855 7.35783C20.6485 5.90619 19.5505 4.5 18.0542 4.5H3.8Z"
+                                                stroke="#E8E0D3" stroke-width="1.5" stroke-linecap="round" />
+                                            <path d="M12 11.5H8" stroke="#E8E0D3" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <circle cx="7.5" cy="18" r="1.5" fill="#E8E0D3" />
+                                            <circle cx="16.5" cy="18" r="1.5" fill="#E8E0D3" />
                                         </svg>
                                     </span>
                                 </div>
@@ -326,16 +816,23 @@
                                 <img loading="lazy" src="/assets/img/candy/img4.png" alt="photo candy">
                                 <div class="btn">
                                     <span class="like">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                            <path d="M3.66275 13.2136L9.82377 19.7066C11.0068 20.9533 12.9932 20.9534 14.1762 19.7066L20.3372 13.2136C22.5542 10.8771 22.5543 7.08895 20.3373 4.75248C18.1203 2.416 14.5258 2.416 12.3088 4.75248V4.75248C12.1409 4.92938 11.8591 4.92938 11.6912 4.75248V4.75248C9.47421 2.416 5.87975 2.416 3.66275 4.75248C1.44575 7.08895 1.44575 10.8771 3.66275 13.2136Z" stroke="#E8E0D3" stroke-width="1.5"/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none">
+                                            <path
+                                                d="M3.66275 13.2136L9.82377 19.7066C11.0068 20.9533 12.9932 20.9534 14.1762 19.7066L20.3372 13.2136C22.5542 10.8771 22.5543 7.08895 20.3373 4.75248C18.1203 2.416 14.5258 2.416 12.3088 4.75248V4.75248C12.1409 4.92938 11.8591 4.92938 11.6912 4.75248V4.75248C9.47421 2.416 5.87975 2.416 3.66275 4.75248C1.44575 7.08895 1.44575 10.8771 3.66275 13.2136Z"
+                                                stroke="#E8E0D3" stroke-width="1.5" />
                                         </svg>
                                     </span>
                                     <span class="shop">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
-                                            <path d="M1 1L2.04936 1.20987C2.91136 1.38227 3.55973 2.09732 3.6472 2.97203L3.8 4.5M3.8 4.5L4.7886 12.7383C4.90922 13.7435 5.76195 14.5 6.77435 14.5H15.7673C17.3733 14.5 18.7733 13.407 19.1628 11.8489L20.2855 7.35783C20.6485 5.90619 19.5505 4.5 18.0542 4.5H3.8Z" stroke="#E8E0D3" stroke-width="1.5" stroke-linecap="round"/>
-                                            <path d="M12 11.5H8" stroke="#E8E0D3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <circle cx="7.5" cy="18" r="1.5" fill="#E8E0D3"/>
-                                            <circle cx="16.5" cy="18" r="1.5" fill="#E8E0D3"/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20"
+                                            viewBox="0 0 22 20" fill="none">
+                                            <path
+                                                d="M1 1L2.04936 1.20987C2.91136 1.38227 3.55973 2.09732 3.6472 2.97203L3.8 4.5M3.8 4.5L4.7886 12.7383C4.90922 13.7435 5.76195 14.5 6.77435 14.5H15.7673C17.3733 14.5 18.7733 13.407 19.1628 11.8489L20.2855 7.35783C20.6485 5.90619 19.5505 4.5 18.0542 4.5H3.8Z"
+                                                stroke="#E8E0D3" stroke-width="1.5" stroke-linecap="round" />
+                                            <path d="M12 11.5H8" stroke="#E8E0D3" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <circle cx="7.5" cy="18" r="1.5" fill="#E8E0D3" />
+                                            <circle cx="16.5" cy="18" r="1.5" fill="#E8E0D3" />
                                         </svg>
                                     </span>
                                 </div>
@@ -355,16 +852,23 @@
                                 <img loading="lazy" src="/assets/img/candy/img5.png" alt="photo candy">
                                 <div class="btn">
                                     <span class="like">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                            <path d="M3.66275 13.2136L9.82377 19.7066C11.0068 20.9533 12.9932 20.9534 14.1762 19.7066L20.3372 13.2136C22.5542 10.8771 22.5543 7.08895 20.3373 4.75248C18.1203 2.416 14.5258 2.416 12.3088 4.75248V4.75248C12.1409 4.92938 11.8591 4.92938 11.6912 4.75248V4.75248C9.47421 2.416 5.87975 2.416 3.66275 4.75248C1.44575 7.08895 1.44575 10.8771 3.66275 13.2136Z" stroke="#E8E0D3" stroke-width="1.5"/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none">
+                                            <path
+                                                d="M3.66275 13.2136L9.82377 19.7066C11.0068 20.9533 12.9932 20.9534 14.1762 19.7066L20.3372 13.2136C22.5542 10.8771 22.5543 7.08895 20.3373 4.75248C18.1203 2.416 14.5258 2.416 12.3088 4.75248V4.75248C12.1409 4.92938 11.8591 4.92938 11.6912 4.75248V4.75248C9.47421 2.416 5.87975 2.416 3.66275 4.75248C1.44575 7.08895 1.44575 10.8771 3.66275 13.2136Z"
+                                                stroke="#E8E0D3" stroke-width="1.5" />
                                         </svg>
                                     </span>
                                     <span class="shop">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
-                                            <path d="M1 1L2.04936 1.20987C2.91136 1.38227 3.55973 2.09732 3.6472 2.97203L3.8 4.5M3.8 4.5L4.7886 12.7383C4.90922 13.7435 5.76195 14.5 6.77435 14.5H15.7673C17.3733 14.5 18.7733 13.407 19.1628 11.8489L20.2855 7.35783C20.6485 5.90619 19.5505 4.5 18.0542 4.5H3.8Z" stroke="#E8E0D3" stroke-width="1.5" stroke-linecap="round"/>
-                                            <path d="M12 11.5H8" stroke="#E8E0D3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <circle cx="7.5" cy="18" r="1.5" fill="#E8E0D3"/>
-                                            <circle cx="16.5" cy="18" r="1.5" fill="#E8E0D3"/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20"
+                                            viewBox="0 0 22 20" fill="none">
+                                            <path
+                                                d="M1 1L2.04936 1.20987C2.91136 1.38227 3.55973 2.09732 3.6472 2.97203L3.8 4.5M3.8 4.5L4.7886 12.7383C4.90922 13.7435 5.76195 14.5 6.77435 14.5H15.7673C17.3733 14.5 18.7733 13.407 19.1628 11.8489L20.2855 7.35783C20.6485 5.90619 19.5505 4.5 18.0542 4.5H3.8Z"
+                                                stroke="#E8E0D3" stroke-width="1.5" stroke-linecap="round" />
+                                            <path d="M12 11.5H8" stroke="#E8E0D3" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <circle cx="7.5" cy="18" r="1.5" fill="#E8E0D3" />
+                                            <circle cx="16.5" cy="18" r="1.5" fill="#E8E0D3" />
                                         </svg>
                                     </span>
                                 </div>
@@ -384,16 +888,23 @@
                                 <img loading="lazy" src="/assets/img/candy/img1.png" alt="photo candy">
                                 <div class="btn">
                                     <span class="like">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                            <path d="M3.66275 13.2136L9.82377 19.7066C11.0068 20.9533 12.9932 20.9534 14.1762 19.7066L20.3372 13.2136C22.5542 10.8771 22.5543 7.08895 20.3373 4.75248C18.1203 2.416 14.5258 2.416 12.3088 4.75248V4.75248C12.1409 4.92938 11.8591 4.92938 11.6912 4.75248V4.75248C9.47421 2.416 5.87975 2.416 3.66275 4.75248C1.44575 7.08895 1.44575 10.8771 3.66275 13.2136Z" stroke="#E8E0D3" stroke-width="1.5"/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none">
+                                            <path
+                                                d="M3.66275 13.2136L9.82377 19.7066C11.0068 20.9533 12.9932 20.9534 14.1762 19.7066L20.3372 13.2136C22.5542 10.8771 22.5543 7.08895 20.3373 4.75248C18.1203 2.416 14.5258 2.416 12.3088 4.75248V4.75248C12.1409 4.92938 11.8591 4.92938 11.6912 4.75248V4.75248C9.47421 2.416 5.87975 2.416 3.66275 4.75248C1.44575 7.08895 1.44575 10.8771 3.66275 13.2136Z"
+                                                stroke="#E8E0D3" stroke-width="1.5" />
                                         </svg>
                                     </span>
                                     <span class="shop">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
-                                            <path d="M1 1L2.04936 1.20987C2.91136 1.38227 3.55973 2.09732 3.6472 2.97203L3.8 4.5M3.8 4.5L4.7886 12.7383C4.90922 13.7435 5.76195 14.5 6.77435 14.5H15.7673C17.3733 14.5 18.7733 13.407 19.1628 11.8489L20.2855 7.35783C20.6485 5.90619 19.5505 4.5 18.0542 4.5H3.8Z" stroke="#E8E0D3" stroke-width="1.5" stroke-linecap="round"/>
-                                            <path d="M12 11.5H8" stroke="#E8E0D3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <circle cx="7.5" cy="18" r="1.5" fill="#E8E0D3"/>
-                                            <circle cx="16.5" cy="18" r="1.5" fill="#E8E0D3"/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20"
+                                            viewBox="0 0 22 20" fill="none">
+                                            <path
+                                                d="M1 1L2.04936 1.20987C2.91136 1.38227 3.55973 2.09732 3.6472 2.97203L3.8 4.5M3.8 4.5L4.7886 12.7383C4.90922 13.7435 5.76195 14.5 6.77435 14.5H15.7673C17.3733 14.5 18.7733 13.407 19.1628 11.8489L20.2855 7.35783C20.6485 5.90619 19.5505 4.5 18.0542 4.5H3.8Z"
+                                                stroke="#E8E0D3" stroke-width="1.5" stroke-linecap="round" />
+                                            <path d="M12 11.5H8" stroke="#E8E0D3" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <circle cx="7.5" cy="18" r="1.5" fill="#E8E0D3" />
+                                            <circle cx="16.5" cy="18" r="1.5" fill="#E8E0D3" />
                                         </svg>
                                     </span>
                                 </div>
@@ -413,16 +924,23 @@
                                 <img loading="lazy" src="/assets/img/candy/img6.png" alt="photo candy">
                                 <div class="btn">
                                     <span class="like">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                            <path d="M3.66275 13.2136L9.82377 19.7066C11.0068 20.9533 12.9932 20.9534 14.1762 19.7066L20.3372 13.2136C22.5542 10.8771 22.5543 7.08895 20.3373 4.75248C18.1203 2.416 14.5258 2.416 12.3088 4.75248V4.75248C12.1409 4.92938 11.8591 4.92938 11.6912 4.75248V4.75248C9.47421 2.416 5.87975 2.416 3.66275 4.75248C1.44575 7.08895 1.44575 10.8771 3.66275 13.2136Z" stroke="#E8E0D3" stroke-width="1.5"/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none">
+                                            <path
+                                                d="M3.66275 13.2136L9.82377 19.7066C11.0068 20.9533 12.9932 20.9534 14.1762 19.7066L20.3372 13.2136C22.5542 10.8771 22.5543 7.08895 20.3373 4.75248C18.1203 2.416 14.5258 2.416 12.3088 4.75248V4.75248C12.1409 4.92938 11.8591 4.92938 11.6912 4.75248V4.75248C9.47421 2.416 5.87975 2.416 3.66275 4.75248C1.44575 7.08895 1.44575 10.8771 3.66275 13.2136Z"
+                                                stroke="#E8E0D3" stroke-width="1.5" />
                                         </svg>
                                     </span>
                                     <span class="shop">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
-                                            <path d="M1 1L2.04936 1.20987C2.91136 1.38227 3.55973 2.09732 3.6472 2.97203L3.8 4.5M3.8 4.5L4.7886 12.7383C4.90922 13.7435 5.76195 14.5 6.77435 14.5H15.7673C17.3733 14.5 18.7733 13.407 19.1628 11.8489L20.2855 7.35783C20.6485 5.90619 19.5505 4.5 18.0542 4.5H3.8Z" stroke="#E8E0D3" stroke-width="1.5" stroke-linecap="round"/>
-                                            <path d="M12 11.5H8" stroke="#E8E0D3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <circle cx="7.5" cy="18" r="1.5" fill="#E8E0D3"/>
-                                            <circle cx="16.5" cy="18" r="1.5" fill="#E8E0D3"/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20"
+                                            viewBox="0 0 22 20" fill="none">
+                                            <path
+                                                d="M1 1L2.04936 1.20987C2.91136 1.38227 3.55973 2.09732 3.6472 2.97203L3.8 4.5M3.8 4.5L4.7886 12.7383C4.90922 13.7435 5.76195 14.5 6.77435 14.5H15.7673C17.3733 14.5 18.7733 13.407 19.1628 11.8489L20.2855 7.35783C20.6485 5.90619 19.5505 4.5 18.0542 4.5H3.8Z"
+                                                stroke="#E8E0D3" stroke-width="1.5" stroke-linecap="round" />
+                                            <path d="M12 11.5H8" stroke="#E8E0D3" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <circle cx="7.5" cy="18" r="1.5" fill="#E8E0D3" />
+                                            <circle cx="16.5" cy="18" r="1.5" fill="#E8E0D3" />
                                         </svg>
                                     </span>
                                 </div>
@@ -437,20 +955,24 @@
                         </a>
                     </div>
                 </div>
-            <div class="container">
-                <div class="swiper-button-prev">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="31" viewBox="0 0 20 31" fill="none">
-                        <path d="M6.34576 31L0 31L-6.77527e-07 15.5L-1.35505e-06 0L6.34576 -7.2751e-07L19.0373 15.5L6.34576 31Z" fill="#ECE5DB"/>
-                    </svg>
-                </div>
-                <div class="swiper-button-next">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="31" viewBox="0 0 20 31" fill="none">
-                        <path d="M6.34576 31L0 31L-6.77527e-07 15.5L-1.35505e-06 0L6.34576 -7.2751e-07L19.0373 15.5L6.34576 31Z" fill="#ECE5DB"/>
-                    </svg>
+                <div class="container">
+                    <div class="swiper-button-prev">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="31" viewBox="0 0 20 31" fill="none">
+                            <path
+                                d="M6.34576 31L0 31L-6.77527e-07 15.5L-1.35505e-06 0L6.34576 -7.2751e-07L19.0373 15.5L6.34576 31Z"
+                                fill="#ECE5DB" />
+                        </svg>
+                    </div>
+                    <div class="swiper-button-next">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="31" viewBox="0 0 20 31" fill="none">
+                            <path
+                                d="M6.34576 31L0 31L-6.77527e-07 15.5L-1.35505e-06 0L6.34576 -7.2751e-07L19.0373 15.5L6.34576 31Z"
+                                fill="#ECE5DB" />
+                        </svg>
+                    </div>
                 </div>
             </div>
-            </div>
-                
+
         </div>
     </main>
 
@@ -458,6 +980,7 @@
 
     <script src="/assets/js/header.js"></script>
     <script src="/assets/js/footer.js"></script>
+    <script src="/assets/js/constructor.js"></script>
     <script defer src="/assets/js/script.js"></script>
     <script defer src="/assets/js/swiper-bundle.min.js"></script>
     <script defer src="/assets/js/components/like.js"></script>
