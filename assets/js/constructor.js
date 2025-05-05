@@ -598,32 +598,29 @@ document.addEventListener('DOMContentLoaded', () => {
   
       // Рандомна розкладка цукерок для вже обраної коробки
       function randomizeCandies() {
-        const gridCells = document.querySelectorAll('#boxGrid .grid-cell');
-        if (!gridCells || gridCells.length === 0) {
-          alert("Спочатку оберіть кількість (щоб з'явилася сітка)!");
+        const cells = document.querySelectorAll('#boxGrid .grid-cell');
+        if (!cells.length) {
+          alert("Спочатку оберіть кількість!");
           return;
         }
-        const candyOptions = Array.from(document.querySelectorAll('.options-container.candy-option .option'));
-        if (candyOptions.length === 0) return;
-        gridCells.forEach(cell => {
+        const options = Array.from(document.querySelectorAll('.candy-option .option'));
+        cells.forEach(cell => {
           cell.innerHTML = '';
           cell.removeAttribute('data-candy');
-          const randomCandy = candyOptions[Math.floor(Math.random() * candyOptions.length)];
-          const candyType = randomCandy.getAttribute('data-value');
-          const candyImg = randomCandy.querySelector('img');
-          if (candyImg) {
-            const newImg = document.createElement('img');
-            newImg.src = candyImg.src;
-            newImg.alt = candyImg.alt;
-            newImg.style.maxWidth = '70%';
-            newImg.style.maxHeight = '80%';
-            cell.appendChild(newImg);
-          }
-          // Прив'язуємо data-candy, щоб у підрахунку врахувати ціну
-          cell.dataset.candy = candyType;
+          const rand = options[Math.floor(Math.random() * options.length)];
+          const type = rand.getAttribute('data-value');
+          const imgSrc = rand.querySelector('img').src;
+          const imgAlt = rand.querySelector('img').alt;
+          const img = document.createElement('img');
+          img.src = imgSrc;
+          img.alt = imgAlt;
+          img.style.maxWidth = '70%';
+          img.style.maxHeight = '80%';
+          cell.appendChild(img);
+          cell.dataset.candy = type;
+          attachRemoveButton(cell);
         });
         updatePrice();
-        // Зберігаємо поточний стан розташування цукерок
         saveCandyLayout();
       }
   
@@ -726,6 +723,75 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         });
       }
+
+/** Додає кнопку видалення у клітинку */
+    function attachRemoveButton(cell) {
+      // Якщо кнопка вже додана — не додаємо ще раз
+      if (cell.querySelector('.remove-candy-btn')) return;
+      const btn = document.createElement('button');
+      btn.className = 'remove-candy-btn';
+      btn.innerHTML = '&times;';
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        cell.innerHTML = '';
+        cell.removeAttribute('data-candy');
+        updatePrice();
+      });
+      cell.appendChild(btn);
+    }
+  
+    /** Додає цукерку у вибрану клітинку з кнопкою видалення */
+    function addCandyToCell(candyType, selectedCell) {
+      if (!selectedCell) return;
+      // Очищаємо попередню цукерку
+      selectedCell.innerHTML = '';
+      selectedCell.removeAttribute('data-candy');
+      // Додаємо зображення цукерки
+      const candyOption = document.querySelector(`.options-container.candy-option .option[data-value="${candyType}"]`);
+      if (candyOption) {
+        const candyImgEl = candyOption.querySelector('img');
+        if (candyImgEl) {
+          const newCandyImg = document.createElement('img');
+          newCandyImg.src = candyImgEl.src;
+          newCandyImg.alt = candyImgEl.alt;
+          newCandyImg.style.maxWidth = '90%';
+          newCandyImg.style.maxHeight = '90%';
+          selectedCell.appendChild(newCandyImg);
+        }
+      }
+      selectedCell.dataset.candy = candyType;
+      updatePrice();
+      attachRemoveButton(selectedCell);
+      saveCandyLayout();
+    }
+  
+   
+    /** Відновлює розкладку і додає кнопки видалення */
+    function restoreCandyLayout() {
+      const cells = document.querySelectorAll('#boxGrid .grid-cell');
+      cells.forEach(cell => {
+        const index = cell.dataset.cellIndex;
+        const candyType = candyLayout[index];
+        if (candyType) {
+          cell.innerHTML = '';
+          const candyOption = document.querySelector(`.options-container.candy-option .option[data-value="${candyType}"]`);
+          if (candyOption) {
+            const candyImgEl = candyOption.querySelector('img');
+            if (candyImgEl) {
+              const img = document.createElement('img');
+              img.src = candyImgEl.src;
+              img.alt = candyImgEl.alt;
+              img.style.maxWidth = '90%';
+              img.style.maxHeight = '90%';
+              cell.appendChild(img);
+            }
+          }
+          cell.dataset.candy = candyType;
+          attachRemoveButton(cell);
+        }
+      });
+      updatePrice();
+    }
 
     function init() {
       // Опрацьовуємо групи опцій (material, color, shape, quantity)

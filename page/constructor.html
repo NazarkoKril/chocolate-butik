@@ -17,6 +17,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap" rel="stylesheet">
     <!-- fav-icon -->
     <link rel="icon" href="/assets/img/fav.svg" type="image/x-icon">
+    <!-- intro.js -->
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/intro.js/minified/introjs.min.css"
+  />
+  <script src="https://unpkg.com/intro.js/minified/intro.min.js"></script>
+  
     <title>Шоколадний бутік</title>
 </head>
 
@@ -41,9 +48,10 @@
                     <div class=""></div>
                     <div class="flex">
                         <h1>Збери СВІЙ бокс!</h1>
-                        <button class="randoms">Рандомізувати</button>
+                        <button class="randoms" data-intro="Для випадкової готової коробки натисни тут" data-step="15">Рандомізувати</button>
                     </div>
                 </div>
+                <button id="helpBtn" class="help-btn">?</button>
 
                 <div class="grid2">
                     <div class="box-preview">
@@ -53,7 +61,7 @@
                         <!-- Top view for candy placement -->
                         <div class="box-top-view" id="boxTopView">
                             <img src="/assets/img/constructor/box/box3.1.png" alt="Box Top View" id="topViewImage">
-                            <div class="box-grid" id="boxGrid"></div>
+                            <div class="box-grid" id="boxGrid" data-intro="Для початку обери клітинку" data-step="11"></div>
                         </div>
                     </div>
 
@@ -61,16 +69,18 @@
 
 
 
-                        <div class="tabs">
-                            <div class="tab active_tab" data-tab="material">Матеріал</div>
-                            <div class="tab" data-tab="color">Колір</div>
-                            <div class="tab" data-tab="shape">Форма</div>
-                            <div class="tab" data-tab="quantity">Кількість</div>
-                            <div class="tab" data-tab="candy">Цукерки</div>
+                        <div class="tabs" data-intro="Для налаштування коробки обирайте потрібну вкладку"
+                        data-step="1">
+                            <div class="tab active_tab" data-tab="material" data-intro="Для початку оберіть вкладку 'Матеріал'" data-step="2">Матеріал</div>
+                            <div class="tab" data-tab="color" data-intro="Тепер оберіть вкладку 'Колір'" data-step="4">Колір</div>
+                            <div class="tab" data-tab="shape" data-intro="Тепер оберіть вкладку 'Форма'" data-step="6">Форма</div>
+                            <div class="tab" data-tab="quantity" data-intro="Тепер оберіть вкладку 'Кількість'" data-step="8">Кількість</div>
+                            <div class="tab" data-tab="candy" data-intro="Тепер оберіть вкладку 'Цукерки'" data-step="10">Цукерки</div>
                         </div>
 
                         <!-- Material options -->
-                        <div class="options-container active_option" data-content="material">
+                        <div class="options-container active_option" data-content="material" data-intro="Тут оберіть сам матеріал для коробки"
+                        data-step="3">
                             <div class="options-grid">
                                 <div class="option material-option selected" data-value="cardboard" data-price="100">
                                     <div class="image_box">
@@ -111,7 +121,7 @@
                         </div>
 
                         <!-- Color options -->
-                        <div class="options-container " data-content="color">
+                        <div class="options-container " data-content="color" data-intro="Тут оберіть потрібний колір " data-step="5">
                             <div class="options-grid">
                                 <div class="option selected" data-value="red" data-price="0">
                                     <div class="image_box">
@@ -168,7 +178,7 @@
                         </div>
 
                         <!-- Shape options -->
-                        <div class="options-container " data-content="shape">
+                        <div class="options-container " data-content="shape" data-intro="Тут оберіть потрібну форму " data-step="7">
                             <div class="options-grid">
                                 <div class="option  " data-value="square" data-price="0">
                                     <div class="image_box">
@@ -246,7 +256,7 @@
                         </div>
 
                         <!-- Quantity options -->
-                        <div class="options-container " data-content="quantity">
+                        <div class="options-container " data-content="quantity" data-intro="Тут оберіть потрібну кількість " data-step="9">
                             <div class="options-grid">
                                 <div class="option " data-value="4" data-grid="2x2" data-price="0">
                                     <div class="image_box">
@@ -314,9 +324,9 @@
                         <!-- Candy options -->
 
                         <div class="options-container candy-option" data-content="candy">
-                            <button class="dark_btn btn_candy">Випадкова розкладка</button>
-                            <div class="candies-grid">
-                                <div class="option candy " data-value="candy1" data-price="20">
+                            <button class="dark_btn btn_candy" data-intro="Для випадкової розкладки цукерок натисни тут" data-step="14">Випадкова розкладка</button>
+                            <div class="candies-grid" data-intro="І після обери цукерку" data-step="12">
+                                <div class="option candy " data-value="candy1" data-price="20" data-intro="Щоб дізнатись інформацію про цукерку натисни на неї " data-step="13">
                                     <div class="image_box">
                                         <img src="/assets/img/constructor/candy/10.png" alt="серце">
                                         <p class="none">цього варіанту немає для цієї опції, будь ласка, оберіть щось
@@ -426,9 +436,9 @@
                         </div>
 
                         <div class="price-container">
-                            <div class="price">4545 ₴</div>
+                            <div class="price" data-intro="Сума вашої коробки" data-step="16">4545 ₴</div>
                             <div class="btn_add">
-                                <button class="lite_btn">Додати бокс у кошик</button>
+                                <button class="lite_btn" data-intro="Якщо твоя коробка готова, натискайте тут" data-step="17">Додати бокс у кошик</button>
                                 <p class="">Ви не заповнили весь бокс! Оберіть ще варіант!</p>
                             </div>
 
@@ -980,6 +990,7 @@
 
     <script src="/assets/js/header.js"></script>
     <script src="/assets/js/footer.js"></script>
+    <script src="/assets/js/intro.js"></script>
     <script src="/assets/js/constructor.js"></script>
     <script defer src="/assets/js/script.js"></script>
     <script defer src="/assets/js/swiper-bundle.min.js"></script>

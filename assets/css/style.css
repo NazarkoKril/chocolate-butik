@@ -502,7 +502,8 @@ button {
   font-family: "Avenir Next";
 }
 
-h2, h3 {
+h2,
+h3 {
   color: var(--color_dark);
   font-family: "Nyght Serif";
   font-weight: 400;
@@ -602,7 +603,10 @@ legend {
   color: var(--color_dark);
 }
 
-.input:hover input, .input:focus-within input, .input:hover .selector, .input:focus-within .selector {
+.input:hover input,
+.input:focus-within input,
+.input:hover .selector,
+.input:focus-within .selector {
   border-bottom: 2px solid var(--color_dark);
 }
 
@@ -2617,7 +2621,7 @@ footer .footer_bot .grid5 a {
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .blog .info {
-  color: var(--small-text, #2B221B);
+  color: var(--small-text, #2b221b);
   text-align: center;
   font-size: 18px !important;
   font-weight: 500 !important;
@@ -2664,7 +2668,7 @@ footer .footer_bot .grid5 a {
   margin-bottom: 5px;
 }
 .blog .grid2 p {
-  color: var(--small-text, #2B221B);
+  color: var(--small-text, #2b221b);
   /* Body base */
   font-family: "Avenir Next";
   font-size: 16px;
@@ -2695,9 +2699,9 @@ footer .footer_bot .grid5 a {
 }
 
 .text_page {
-  color: var(--second, #ECE5DB);
+  color: var(--second, #ece5db);
   -webkit-text-stroke-width: 1.02px;
-  -webkit-text-stroke-color: var(--second, #ECE5DB);
+  -webkit-text-stroke-color: var(--second, #ece5db);
   font-family: "Nyght Serif";
   font-size: clamp(32px, 8vw, 128px);
   font-style: normal;
@@ -2773,6 +2777,21 @@ footer .footer_bot .grid5 a {
           transform: translate(-50%, -50%);
   text-wrap: nowrap;
   opacity: 0;
+}
+
+.grid-cell {
+  position: relative;
+}
+
+.remove-candy-btn {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #453526;
 }
 
 @media (max-width: 1930px) {
