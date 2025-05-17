@@ -253,8 +253,7 @@
   
 .order {
   width: 100%;
-  margin: 0 auto;
-  margin-bottom: 50px;
+  margin: 16px auto 50px;
 }
 .item {
   transition: opacity 0.3s, transform 0.3s;

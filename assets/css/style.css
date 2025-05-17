@@ -264,7 +264,7 @@ header {
   visibility: visible;
   position: fixed;
   top: 0;
-  right: -100%;
+  left: -100%;
   width: 100%;
   height: 100svh;
   background: var(--second, #ece5db);
@@ -273,8 +273,8 @@ header {
   padding: 50px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-transition: right 0.3s ease;
-  transition: right 0.3s ease;
+  -webkit-transition: left 0.3s ease;
+  transition: left 0.3s ease;
   z-index: 99;
   overflow-y: auto;
   -webkit-transition: var(--trans);
@@ -289,7 +289,7 @@ header {
 }
 
 .burger__menu.active {
-  right: 0;
+  left: 0;
   opacity: 1;
   visibility: visible;
 }
@@ -424,7 +424,27 @@ header {
   display: none;
 }
 
-@media (max-width: 1150px) {
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100svh;
+  background-color: rgba(16, 16, 16, 0.5019607843);
+  z-index: 998;
+  -webkit-transition: var(--trans);
+  transition: var(--trans);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+@media (max-width: 1250px) {
   .h__center {
     display: none;
   }
@@ -759,6 +779,7 @@ main {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  margin: 0;
 }
 .hero_info p {
   color: var(--second, #ece5db);
@@ -1658,6 +1679,8 @@ main {
   display: grid;
   grid-template-columns: 450px 1fr;
   gap: 20px;
+  position: relative;
+  z-index: 1;
 }
 .sect_about .grid2 .right {
   position: relative;
@@ -1680,7 +1703,7 @@ main {
   line-height: normal;
   position: absolute;
   opacity: 0.4;
-  z-index: 1;
+  z-index: 0;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   left: 50%;
@@ -1794,6 +1817,7 @@ main {
   font-weight: 400;
   line-height: normal;
   margin-bottom: 15px;
+  text-align: left;
 }
 .sect_corporate .info p {
   color: var(--small-text, #2b221b);
@@ -2806,6 +2830,12 @@ footer .footer_bot .grid5 a {
   .blog .product-gallery {
     grid-template-columns: 1fr 1fr 1fr;
   }
+  .h__center {
+    margin-left: 30px;
+  }
+  .header__list {
+    gap: 30px;
+  }
 }
 @media (max-width: 1250px) {
   .done_tamplate .grid3 {
@@ -2813,12 +2843,6 @@ footer .footer_bot .grid5 a {
   }
   .sect_about.about h2 {
     font-size: 102px;
-  }
-  .h__center {
-    margin-left: 30px;
-  }
-  .header__list {
-    gap: 30px;
   }
   footer .top .grid4 {
     gap: 30px;
@@ -3024,61 +3048,65 @@ footer .footer_bot .grid5 a {
     font-size: 32px;
   }
   .sect_box {
-    padding-bottom: 30px;
+    padding-bottom: 50px;
+    padding-top: 176px;
+    margin-top: -30px;
   }
   .sect_box .anim1 {
     max-width: 100px;
-    top: 50px;
-    left: 164px;
+    top: 427px;
+    left: 17px;
   }
   .sect_box .anim2 {
     max-width: 44px;
-    top: 160px;
-    left: 120px;
+    top: 126px;
+    left: 16px;
   }
   .sect_box .anim3 {
     max-width: 170px;
-    left: -67px;
-    bottom: 0px;
+    left: 14px;
+    bottom: auto;
+    top: 16px;
   }
   .sect_box .anim4 {
-    max-width: 44px;
-    left: auto;
-    right: 50px;
-    bottom: 190px;
+    display: none;
   }
   .sect_box .anim5 {
     max-width: 176px;
-    left: 180px;
-    bottom: 66px;
+    left: -58px;
+    bottom: 186px;
   }
   .sect_box .anim6 {
     max-width: 130px;
-    top: -23px;
-    right: 300px;
+    top: 314px;
+    right: -43px;
   }
   .sect_box .anim7 {
     max-width: 44px;
-    top: 17px;
-    right: 200px;
+    top: 0px;
+    right: 76px;
   }
   .sect_box .anim8 {
     max-width: 170px;
-    top: 70px;
-    right: -18px;
+    top: 51px;
+    right: -11px;
   }
   .sect_box .anim9 {
     max-width: 44px;
-    right: 300px;
-    bottom: 200px;
+    right: 60px;
+    bottom: 161px;
   }
   .sect_box .anim10 {
-    max-width: 165px;
+    /* max-width: 165px;
     right: 150px;
-    bottom: -70px;
+    bottom: -70px; */
+    display: none;
   }
   .sect_box a {
-    margin-top: 200px;
+    margin-top: 218px;
+  }
+  .sect_about {
+    margin-top: 0;
   }
   .sect_new::after,
   .sect_new::before {
@@ -3111,8 +3139,14 @@ footer .footer_bot .grid5 a {
             transform: translateX(-50%);
     white-space: nowrap;
   }
+  .hero_info {
+    top: 25%;
+  }
   .hero_info h2 {
     font-size: 45px;
+  }
+  .hero_info a {
+    margin-top: 40px;
   }
   .backet_main {
     padding-left: 15px;

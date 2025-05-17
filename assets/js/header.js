@@ -37,7 +37,7 @@
                                     <a href="/page/franchise.html" class="header__link">Франшиза</a>
                                 </li>
                                 <li class="header__item">
-                                    <a href="/page/box.html" class="header__link">Конструктор боксів</a>
+                                    <a href="/page/box.html" class="header__link">Зібрати бокс</a>
                                 </li>
                             </ul>
                             <div class="footer__l">
@@ -74,7 +74,9 @@
                             <li class="header__item">
                                 <a href="/page/franchise.html" class="header__link">Франшиза</a>
                             </li>
-    
+                            <li class="header__item">
+                                <a href="/page/box.html" class="header__link">Зібрати бокс</a>
+                            </li>    
                         </ul>
                     </nav>
                 </div>
@@ -240,6 +242,8 @@
             </div>
             <a href="/page/cart.html" class="lite_btn">Оформити замовлення</a>
         </div>
+
+        <div class="overlay"></div>
     </header>
     `
     header.forEach( (el) => {

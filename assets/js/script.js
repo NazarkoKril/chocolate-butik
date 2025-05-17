@@ -27,14 +27,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const backetMain = document.querySelector(".backet_main");
     const closeBacketBtn = document.querySelector(".close_backet");
     const removeCandyBtns = document.querySelectorAll(".remove_candy");
+    const overlay = document.querySelector('.overlay');
   
-    if (backetBtn && backetMain && closeBacketBtn) {
+    if (backetBtn && backetMain && closeBacketBtn && overlay) {
       backetBtn.addEventListener("click", function () {
         backetMain.classList.add("open");
+        overlay.classList.add('active');
       });
   
       closeBacketBtn.addEventListener("click", function () {
         backetMain.classList.remove("open");
+        overlay.classList.remove('active');
+      });
+
+      overlay.addEventListener('click', () => {
+        backetMain.classList.remove("open");
+        overlay.classList.remove('active');
       });
   
       removeCandyBtns.forEach(button => {

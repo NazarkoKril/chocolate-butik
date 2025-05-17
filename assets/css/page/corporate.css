@@ -101,7 +101,7 @@ main {
     line-height: normal;
     position: absolute;
     opacity: 0.4;
-    z-index: 1;
+    z-index: -1;
     right: 5%;
     top: 0px;
     width: 100%;
@@ -216,6 +216,7 @@ main {
     font-family: "Nyght Serif";
     font-weight: 400;
     font-size: 32px;
+    -webkit-text-stroke: 0.26px var(--color_dark);
 }
 
 .events-item-text p {
@@ -377,6 +378,10 @@ main {
         margin-bottom: 0;
         gap: 20px;
         margin-top: 20px;
+    }
+
+    .events-form button {
+        align-self: center;
     }
 
     .add-to-cart-header {

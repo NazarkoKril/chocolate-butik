@@ -198,14 +198,14 @@ header {
 	visibility: visible;
 	position: fixed;
 	top: 0;
-	right: -100%;
+	left: -100%;
 	width: 100%;
 	height: 100svh;
 	background: var(--second, #ece5db);
 	box-shadow: 0px 0px 14px 0px rgba(84, 72, 61, 0.1);
 	padding: 50px;
 	box-sizing: border-box;
-	transition: right 0.3s ease;
+	transition: left 0.3s ease;
 	z-index: 99;
 	overflow-y: auto;
 	transition: var(--trans);
@@ -220,7 +220,7 @@ header {
 }
 
 .burger__menu.active {
-	right: 0;
+	left: 0;
 	opacity: 1;
 	visibility: visible;
 }
@@ -340,7 +340,27 @@ header {
 	display: none;
 }
 
-@media (max-width: 1150px) {
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100svh;
+	background-color: #10101080;
+	z-index: 998;
+	transition: var(--trans);
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+  
+	&.active {
+	  opacity: 1;
+	  visibility: visible;
+	  pointer-events: auto;
+	}
+  }
+
+@media (max-width: 1250px) {
 	.h__center {
 		display: none;
 	}
@@ -642,6 +662,7 @@ main {
 		font-style: normal;
 		font-weight: 400;
 		line-height: normal;
+		margin: 0;
 	}
 
 	p {
@@ -1432,6 +1453,8 @@ main {
 		display: grid;
 		grid-template-columns: 450px 1fr;
 		gap: 20px;
+		position: relative;
+		z-index: 1;
 
 		.right {
 			position: relative;
@@ -1449,7 +1472,7 @@ main {
 			line-height: normal;
 			position: absolute;
 			opacity: 0.4;
-			z-index: 1;
+			z-index: 0;
 			transform: translateX(-50%);
 			left: 50%;
 			top: 0px;
@@ -1566,6 +1589,7 @@ main {
 			font-weight: 400;
 			line-height: normal;
 			margin-bottom: 15px;
+			text-align: left;
 		}
 
 		p {
@@ -2495,6 +2519,12 @@ footer {
 	.blog .product-gallery {
 		grid-template-columns: 1fr 1fr 1fr;
 	}
+	.h__center {
+		margin-left: 30px;
+	}
+	.header__list {
+		gap: 30px;
+	}
 }
 
 @media (max-width: 1250px) {
@@ -2503,13 +2533,6 @@ footer {
 	}
 	.sect_about.about h2 {
 		font-size: 102px;
-	}
-	.h__center {
-		margin-left: 30px;
-	}
-
-	.header__list {
-		gap: 30px;
 	}
 
 	footer .top .grid4 {
@@ -2744,72 +2767,74 @@ footer {
 	}
 
 	.sect_box {
-		padding-bottom: 30px;
+		padding-bottom: 50px;
+		padding-top: 176px;
+		margin-top: -30px;
 
 		.anim1 {
 			max-width: 100px;
-			top: 50px;
-			left: 164px;
+			top: 427px;
+			left: 17px;
 		}
 
 		.anim2 {
 			max-width: 44px;
-			top: 160px;
-			left: 120px;
+			top: 126px;
+			left: 16px;
 		}
 
 		.anim3 {
 			max-width: 170px;
-			left: -67px;
-			bottom: 0px;
+			left: 14px;
+			bottom: auto;
+			top: 16px;
 		}
 
 		.anim4 {
-			max-width: 44px;
-			left: auto;
-			right: 50px;
-			bottom: 190px;
+			display: none;
 		}
 
 		.anim5 {
 			max-width: 176px;
-			left: 180px;
-			bottom: 66px;
+			left: -58px;
+			bottom: 186px;
 		}
 
 		.anim6 {
 			max-width: 130px;
-			top: -23px;
-			right: 300px;
+			top: 314px;
+			right: -43px;
 		}
 
 		.anim7 {
 			max-width: 44px;
-			top: 17px;
-			right: 200px;
+			top: 0px;
+			right: 76px;
 		}
 
 		.anim8 {
 			max-width: 170px;
-			top: 70px;
-			right: -18px;
+			top: 51px;
+			right: -11px;
 		}
 
 		.anim9 {
 			max-width: 44px;
-			right: 300px;
-			bottom: 200px;
+			right: 60px;
+			bottom: 161px;
 		}
 
 		.anim10 {
-			max-width: 165px;
-			right: 150px;
-			bottom: -70px;
+			display: none;
 		}
 	}
 
 	.sect_box a {
-		margin-top: 200px;
+		margin-top: 218px;
+	}
+
+	.sect_about {
+		margin-top: 0;
 	}
 
 	.sect_new::after,
@@ -2848,8 +2873,16 @@ footer {
 		white-space: nowrap;
 	}
 
-	.hero_info h2 {
-		font-size: 45px;
+	.hero_info {
+		top: 25%;
+		
+		h2 {
+			font-size: 45px;
+		}
+
+		a {
+			margin-top: 40px;
+		}
 	}
 
 	.backet_main {
